@@ -521,6 +521,7 @@ header .details, .down-watch{
 .content h3 {
 	color: var(--darkMode);
 }
+/* .my-10{margin:40px auto !important} */
 .content{
 	display: contents;
     width: 100%;
@@ -531,7 +532,7 @@ header .details, .down-watch{
 	position: relative;
     border-radius: 10px;
     padding: 0;
-    margin: auto;
+    margin: 30px auto;
     min-width: 210px;
     height: 310px;
 	transition: all .3s ease-in-out;
@@ -1115,13 +1116,9 @@ details summary{
 	}
 	
 	.content .boxImgs{
-		position: relative;
-		border-radius: 10px;
 		padding: 0;
-		margin: 10px auto;
-		min-width: 170px;
+		margin: 30px auto;
 		height: 270px;
-		transition: all .3s ease-in-out;
 	}
 	
 	.content .boxImgs .itemsCard{
@@ -1129,6 +1126,17 @@ details summary{
 		border-radius: 10px;
 		width: 170px;
 		height: 270px;
+		backdrop-filter: blur(5px);
+		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
+		transition: all .3s ease-in-out;
+		padding:0px;
+		z-index: 0;
+	}
+	.content .boxImgs .itemsCard{
+		position: absolute;
+		border-radius: 10px;
+		width: 200px;
+		height: 300px;
 		backdrop-filter: blur(5px);
 		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
 		transition: all .3s ease-in-out;
@@ -1144,8 +1152,8 @@ details summary{
 	.content .boxImgs .itemsCard .Img{
 		transition: all .3s ease-in;
 		border-radius: 10px;
-		width: 170px;
-		height: 270px;
+		width: 200px;
+		height: 300px;
 	}
 	.content .boxImgs:hover .Img{
 		transform: scale(0.9);
@@ -1157,24 +1165,26 @@ details summary{
 	}
 	.content .boxImgs .titlefilm {
 		font-size: 13px;
-		top: 252px;
+		top: 260px;
+		text-align: center;
 		font-weight: bold;
 		margin-left: 0;
 	}
 	.content .boxImgs:hover .titlefilm {
-		top: 266px;
+		top: 280px;
 		transition: all .5s ease;
 	}
-	/* d
 	/* detailsCards */
 	.boxImgs .detailsCards{
-		top: -5px;
-    	left: -14px;
+		top: 0;
+    	left: 0;
 		height: 245px!important;
 	}
 	.boxImgs:hover .overlaycards {
 		backdrop-filter: blur(5px);
 		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
+		width: 200px;
+		height: 300px;
 	}
 }
 @media (max-width: 740px) {
@@ -1184,7 +1194,12 @@ details summary{
 	.d-inline-block-740{
 		display: inline-block!important;
 	}
-
+	.container-custom{
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 @media (max-width: 660px) {
 	/* Header */

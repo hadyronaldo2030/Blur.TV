@@ -10317,13 +10317,6 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-.container-custom{
-  width: 100%;
-  padding-right: 55px;
-  padding-left: 55px;
-  margin-right: auto;
-  margin-left: auto;
-}
 @media (min-width: 576px) {
   .container, .container-sm {
     max-width: 540px;
@@ -10348,3 +10341,19 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+/* =============== custom Style =============== */
+.container-custom{
+  width: 100%;
+  padding-right: 55px;
+  padding-left: 55px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.productRow{
+	display: flex;
+	display: flex;
+    flex-wrap: wrap;
+}
