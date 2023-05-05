@@ -1217,7 +1217,7 @@ details summary{
 		font-size: 13px;
 	}
 	.down-watch .watch,.down-watch .down{
-		padding: 5px;
+		padding: 15px 5px;
 		font-size: 18px!important;
 		color: var(--darkMode);
 		border-radius: 10px;
