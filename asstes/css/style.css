@@ -495,9 +495,10 @@ header .details, .down-watch{
 	border-bottom: 1px solid var(--color-underline);
 }
 .mainCast .cast {
-	display: flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
 }
 .owl-next ,.owl-prev{
 	font-size: 70px!important;
@@ -1093,7 +1094,7 @@ details summary{
 		margin-bottom: 10px;
 	}
 	.btn-shadow{
-		font-size: 14px;
+		font-size: 16px !important;
 		padding: 5px;
 		margin-bottom: 5px;
 		box-shadow: none;
@@ -1101,7 +1102,7 @@ details summary{
 	/* download watch */
 	.down-watch .watch,.down-watch .down{
 		padding: 10px;
-		font-size: 16px;
+		font-size: 18px!important;
 		color: var(--darkMode);
 		border-radius: 10px;
 		box-shadow: none;
@@ -1210,14 +1211,14 @@ details summary{
 	h2{ font-size: 1.1rem!important;}
 	header  h5{ font-size: 15px;}
 	p{
-		font-size: 13px;
+		font-size: 15px;
 	}
 	header .box span{
 		font-size: 13px;
 	}
 	.down-watch .watch,.down-watch .down{
 		padding: 5px;
-		font-size: 14px!important;
+		font-size: 18px!important;
 		color: var(--darkMode);
 		border-radius: 10px;
 		box-shadow: none;
