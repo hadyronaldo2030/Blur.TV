@@ -3160,7 +3160,7 @@
 // ============= niceScroll html =============
 
 $(document).ready(function(){	
-	  $("html, aside,p").niceScroll({
+	  $("html, aside,p, ul").niceScroll({
     cursorcolor: '#5568DF',
     cursorwidth: '5px',
     scrollspeed:60,

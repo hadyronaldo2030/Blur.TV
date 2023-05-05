@@ -1,10 +1,8 @@
-//=============================== Loding ===============================
 // Page loading animation
 $(window).on('load', function() {
 	$('#js-preloader').addClass('loaded');
 
 });
-
 //========================= Dark Mode & Light Mode =========================
 $(document).ready(function() {
 	$(".themeicons").click(function(){
@@ -19,7 +17,6 @@ $(document).ready(function() {
 	}
 });
 });
-
 // ====================== OWl Carousel  ======================
 $(document).ready(function(){	
 	$('.owl-carousel').owlCarousel({
@@ -54,7 +51,11 @@ $(document).ready(function(){
 		}
 	});
 });
+// ===================== Range Filter =====================
 
+function rangeSlide(value) {
+	document.getElementById('rangeValue').innerHTML = value;
+}
 // ===================== active btn Aside Menu =====================
 $(document).ready(function() {
 	// Open & Close menu slider
@@ -163,4 +164,5 @@ var scroll = $(window).scrollTop();
 		}
 });
 	
-  
+//=============================== Loding ===============================
+
