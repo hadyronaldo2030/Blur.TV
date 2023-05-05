@@ -10354,6 +10354,5 @@ a.text-dark:hover, a.text-dark:focus {
 
 .productRow{
 	display: flex;
-	display: flex;
     flex-wrap: wrap;
 }
