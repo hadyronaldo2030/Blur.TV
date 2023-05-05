@@ -114,7 +114,7 @@ nav .item-nav li a{
 	transition: all .2s ease-in;
 	color: var(--darkMode);
 }
-nav .item-nav li:hover  {
+nav .item-nav li:hover{
 	border-bottom: 3px solid var(--color-yellow);
 	color: var(--darkMode);
 }
@@ -388,7 +388,7 @@ to {
 	z-index: 5;
 }
 .trailer-views a{color: #eeeeee!important;}
-/* section View Tra*/
+/* section View Trailer*/
 #bubbleTrailer {
 	display: none;
     width: 100%;
@@ -635,9 +635,10 @@ header .details, .down-watch{
 .detailsCards .boxTrailer{
 	display: flex;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 10px;
     justify-content: space-between;
 }
+
 .detailsCards .boxTrailer .btntype{
 	color: #EEE!important;
     font-weight: bold;
@@ -1157,7 +1158,14 @@ details summary{
 	.content .boxImgs .titlefilm {
 		font-size: 13px;
 		top: 252px;
+		font-weight: bold;
+		margin-left: 0;
 	}
+	.content .boxImgs:hover .titlefilm {
+		top: 266px;
+		transition: all .5s ease;
+	}
+	/* d
 	/* detailsCards */
 	.boxImgs .detailsCards{
 		top: -5px;
