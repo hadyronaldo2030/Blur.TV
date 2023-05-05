@@ -1072,7 +1072,7 @@ details summary{
 	}
 	header .titleCard, .story, .details, .down-watch{
 		width: 100%;
-		margin: 0 auto;
+		margin: 0 auto 30px;
 	}
 	h2{ font-size: 1.5rem!important;}
 	header  h5{ color: #F7FF00; font: 20px;}
@@ -1217,7 +1217,7 @@ details summary{
 		font-size: 13px;
 	}
 	.down-watch .watch,.down-watch .down{
-		padding: 15px 5px !important;
+		padding: 13px 5px !important;
 		font-size: 18px!important;
 		color: var(--darkMode);
 		border-radius: 10px;
