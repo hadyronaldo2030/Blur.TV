@@ -17,40 +17,7 @@ $(document).ready(function() {
 	}
 });
 });
-// ====================== OWl Carousel  ======================
-$(document).ready(function(){	
-	$('.owl-carousel').owlCarousel({
-		loop:true,
-		dots:false,
-		nav:true,
-		autoplayTimeout:4000,
-		mousedrag:true,
-		smartSpeed:2400,
-		responsive:{
-			60:{
-				items:1
-			},
-			300:{
-				items:2
-			},
-			400:{
-				items:3
-			},
-			640:{
-				items:4
-			},
-			770:{
-				items:5
-			},
-			910:{
-				items:6
-			},
-			970:{
-				items:7
-			}
-		}
-	});
-});
+
 // ===================== Range Filter =====================
 
 function rangeSlide(value) {
