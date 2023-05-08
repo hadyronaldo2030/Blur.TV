@@ -21,40 +21,42 @@ Theme Dark & light
 :root{
 	--lightMode: #EEE;
 	--darkMode: rgba(9,18,32,1);
-	--color-yellow: orange;
-	--color-red: #0051ff;
-	--color-blue: #eeeeee;
-	--color-mov: #4b4b4f;
-	--color-blue2: #cedfff;
-	--color-blue3: #0051ff;
+	--yellow: orange;
+	--red: #0051ff;
+	--blue: #eeeeee;
+	--mov: #4b4b4f;
+	--blue2: #cedfff;
+	--blue3: #0051ff;
+	--aside: #ffffff;
 	--blue-head: #091226;
 	--blue-yellow-blue: #0f1a32;
 	--blue-gray-blue: #3C4B57;
-	--color-underline: #00000042;
-	--color-opacity: rgba(233, 233, 233, 0.544);
-	--color-opacity1:#eeeeee;
-	--color-opacity2:#ffd4d645;
-	--color-opacity3:#f0edff00;
+	--underline: #00000042;
+	--opacity: rgba(233, 233, 233, 0.544);
+	--opacity1:#eeeeee;
+	--opacity2:#ffd4d645;
+	--opacity3:#f0edff00;
 }
 
 html[data-theme="lightMode"]{
 	--darkMode: #EEE;
 	--lightMode: rgba(9,18,32,1);
-	--color-yellow: #F7FF00;
-	--color-red: #FF0000;
-	--color-blue: #0B1538;
+	--yellow: #F7FF00;
+	--red: #FF0000;
+	--blue: #0B1538;
 	--blue-head: #09122600;
 	--blue-yellow-blue: #F7FF00;
-	--color-mov: #111C5F;
-	--color-blue2: #091226;
-	--color-blue3: #091226;
+	--mov: #111C5F;
+	--blue2: #091226;
+	--blue3: #091226;
+	--aside: #0b1538d1;
 	--blue-gray-blue: #091226;
-	--color-gray: #35363a00;
-	--color-underline: #eeeeee42;
-	--color-opacity:rgba(9, 18, 32, 0.895);
-	--color-opacity1: rgba(9,18,32,1);
-	--color-opacity2: rgba(0,0,0,0.6980042016806722);
-	--color-opacity3: rgba(0,0,0,0);
+	--gray: #35363a00;
+	--underline: #eeeeee42;
+	--opacity:rgba(9, 18, 32, 0.895);
+	--opacity1: rgba(9,18,32,1);
+	--opacity2: rgba(0,0,0,0.6980042016806722);
+	--opacity3: rgba(0,0,0,0);
 }
 html,body{
 	background: var(--lightMode);
@@ -70,16 +72,16 @@ html,body{
 Navbar
 ==============================*/
 nav {
-width: 100%;
-height: 70px;
-background: var(--color-blue2);
-padding-top: 10px;
-transition: all 1s;
+	width: 100%;
+	height: 70px;
+	background: var(--blue2);
+	padding-top: 10px;
+	transition: all 1s;
 }
 nav .container-custom{
 	display: flex;
-    justify-content: space-between;
-    align-items: center;
+	justify-content: space-between;
+	align-items: center;
 }
 
 /*...... logo .......*/
@@ -92,13 +94,13 @@ nav .container-custom{
 	display: inline-block;
 	color: var(--darkMode);
 }
-.logo span{color: var(--color-yellow);}
+.logo span{color: var(--yellow);}
 /*...... End logo .......*/
 
 /*......  tools nsv .......*/
 nav .toolsNav{
 	width: 70%;
-    max-width: 500px;
+	max-width: 500px;
 	z-index: 9;
 }
 
@@ -112,10 +114,14 @@ nav .item-nav li a{
 	transition: all .2s ease-in;
 	color: var(--darkMode);
 }
-nav .item-nav li:hover{
-	border-bottom: 3px solid var(--color-yellow);
+nav .item-nav li:hover  {
+	height: 23px;
+}
+nav .item-nav li:hover .hvr {
+	border-bottom: 3px solid var(--yellow);
 	color: var(--darkMode);
 }
+
 .activeNavBar{
 	border-bottom: 3px solid #94ff52;
 	color: #c6c0c0;
@@ -128,13 +134,13 @@ nav .item-nav li:hover .dropdownList {
 }
 .item-nav li .dropdownList {
 	transition: all 2s ease-in-out;
-    position: absolute;
-    top: 27px;
-    left: -17px;
-    width: 200px;
+	position: absolute;
+	top: 24px;
+	left: -17px;
+	width: 200px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-    background: #1d1d30ea;
+	background: #1d1d30ea;
 	display: none;
 }
 .item-nav li .dropdownList a{
@@ -150,10 +156,10 @@ nav .item-nav li:hover .dropdownList {
 }
 /* icons navbar */
 nav .iconsnav{
-    width: 213px;
-    display: inline-flex;
-    justify-content: space-around;
-    margin-top: 7px;
+	width: 213px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 nav .iconsnav .icon{
@@ -161,6 +167,7 @@ nav .iconsnav .icon{
 	color: var(--darkMode);
 	display: flex;
 	justify-content: space-around;
+	margin: auto;
 }
 button{
 	background: none;
@@ -181,7 +188,7 @@ button{
 	width: 100%;
 	height: 100%;
 	backdrop-filter: blur(10px);
-	background: var(--color-opacity);
+	background: var(--opacity);
 	color: var(--darkMode);
 	position: fixed;
 	top: 0;
@@ -196,12 +203,12 @@ button{
 }
 #sectionSearch form{
 	width: auto;
-    height: 40px;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: var(--color-blue);
-    border-radius: 5px;
+	height: 40px;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	background: var(--blue);
+	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 	transition: all .5s ease;
 }
@@ -217,8 +224,8 @@ button{
 }
 #sectionSearch form:hover{
 	border:1px solid #fbff0032;
-    box-shadow:  2px 2px 22px rgba(83, 47, 114, 0.593);    
-    background: var(--color-mov);
+	box-shadow:  2px 2px 22px rgba(83, 47, 114, 0.593);    
+	background: var(--mov);
 }
 #sectionSearch form svg{
 	transition: all .5s ease;
@@ -240,7 +247,7 @@ button{
 	background: #83d80b;
 }
 /*...... End Navbar .......*/
-
+	
 
 /*==============================
 	aside
@@ -254,33 +261,42 @@ aside{
     height: 100vh;
 	overflow-y: scroll;
     backdrop-filter: blur(10px);
-    background: linear-gradient(180deg, rgb(10 50 56 / 98%) 0%, rgba(23, 43, 122, 0.795) 60%, #091226 86%);
+	background: var(--aside);
     z-index: 100;
 }
 aside .head{
 	padding: 20px;
 }
+
+.btnfixed{
+	height: 160px;
+    position: absolute;
+    right: 30px;
+    top: 110px;
+    display: flex !important;
+    flex-direction: column;
+}
 aside .userAside{ 
 	font-size: 20px!important;
-    color: #EEE;
+    color: var(--darkMode);
 }
 aside .userAside span{ 
 	font-size: 20px!important;
-    color: #091226;
-    background: #EEE;
+    color: var(--darkMode);
+    background: var(--lightMode);
     border-radius: 10px;
     padding: 10px;
 	margin-right: 10px;
 }
-aside .listItem{
+aside .listItem, #btn-movies{
 	padding: 20px;
 	transition: all .5s ease;
-    color: #EEE!important;
+    color: var(--darkMode);
     font-size: 16px;
 }
-aside li:hover{
+aside .listItem:hover{
     border-left: 4px solid #009aff;
-    background: rgb(0 255 194 / 5%);
+    background: rgba(98, 0, 255, 0.273);
 }
 aside .active{
     border-left: 4px solid #009aff !important;
@@ -293,7 +309,8 @@ aside .dropMovie, .dropSeries{
 	transition: all .5s ease;
 	display: none;
 }
-aside a{color: #EEE;}
+aside a{color: var(--darkMode);
+}
 /*==============================
 	Header
 ==============================*/
@@ -316,7 +333,7 @@ header{
 .overllay2{
 	height: 580px;
 	background: #091226;
-	background: linear-gradient(184deg, var(--color-opacity3) 0%, var(--color-opacity2) 70%, var(--color-opacity1) 86%);
+	background: linear-gradient(184deg, var(--opacity3) 0%, var(--opacity2) 70%, var(--opacity1) 86%);
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -392,7 +409,7 @@ to {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(10px);
-    background: var(--color-opacity);
+    background: var(--opacity);
     color: var(--lightMode);
     position: fixed;
     top: 0;
@@ -419,7 +436,7 @@ header .titleCard, .story, .details, .down-watch{
     margin: 0 auto;
     color: var(--darkMode);
 }
-header .story h5{ color: var(--color-yellow);}
+header .story h5{ color: var(--yellow);}
 header .story p{
 	min-height: 110px;
     max-height: 166px;
@@ -447,7 +464,7 @@ header .details, .down-watch{
 }
 /* download watch */
 .down-watch .watch{
-	background: var(--color-red);
+	background: var(--red);
     color: #091226;
     font-weight: bold;
     width: auto;
@@ -490,7 +507,7 @@ header .details, .down-watch{
 
 }
 .titleSections{
-	border-bottom: 1px solid var(--color-underline);
+	border-bottom: 1px solid var(--underline);
 }
 .mainCast .cast {
     display: flex;
@@ -597,7 +614,7 @@ header .details, .down-watch{
     height: 100%;
     padding: 21px;
     text-align: center;
-    color: var(--color-yellow);
+    color: var(--yellow);
     z-index: 2;
     justify-content: space-between;
     flex-direction: column;
@@ -621,7 +638,7 @@ header .details, .down-watch{
     margin-top: 25px;
 }
 .detailsCards .boxType  .btntype{
-	background: var(--color-yellow);
+	background: var(--yellow);
 	color: #091226;
     font-weight: bold;
     max-width: 130px;
@@ -654,7 +671,7 @@ header .details, .down-watch{
     height: 100%;
     padding: 21px;
     text-align: center;
-    color: var(--color-yellow);
+    color: var(--yellow);
     z-index: 2;
     justify-content: space-between;
     flex-direction: column;
@@ -675,8 +692,8 @@ header .details, .down-watch{
     margin-top: 25px;
 }
 .lastDetailsCards .boxType  .btntype{
-	background: var(--color-yellow);
-    color: var(--color-mov);
+	background: var(--yellow);
+    color: var(--mov);
     font-weight: bold;
     max-width: 130px;
     width: 70px;
@@ -749,7 +766,7 @@ header .details, .down-watch{
 }
 .moreCard .numNav .active{
     height: 100%;
-	background: var(--color-red);
+	background: var(--red);
     box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%);
 }
 
@@ -762,14 +779,14 @@ header .details, .down-watch{
 	color: var(--darkMode) !important;
 }
 .comments .boxComments{
-	background: var(--color-blue)!important;
+	background: var(--blue)!important;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 	height: auto;
 	border-radius: 10px;
 	width: 100%;
 }
 .comments .boxComments{
-	background:  var(--color-blue);
+	background:  var(--blue);
 	height: auto;
 	border-radius: 10px;
 	width: 100%;
@@ -779,10 +796,10 @@ header .details, .down-watch{
 	padding: 10px 0px 15px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid var(--color-underline);
+    border-bottom: 1px solid var(--underline);
 }
 .comments .headComment .userComment span{
-	color:  var(--color-blue);
+	color:  var(--blue);
 	border-radius: 10px;
 	padding: 10px;
 	margin-right: 10px;
@@ -797,7 +814,7 @@ header .details, .down-watch{
 	padding: 10px 0 0;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--color-underline);
+    border-top: 1px solid var(--underline);
 	color: var(--darkMode);
 }
 /* hvr-emojy */
@@ -831,14 +848,14 @@ header .details, .down-watch{
 	outline-color: #09122600;
 	width: 100%;
 	height: 148px;
-	background: var(--color-blue2);
+	background: var(--blue2);
 	color: var(--darkMode);
 	border: none;
 	border-radius: 10px;
 	padding: 10px;
 }
 .btnComment{
-	background: var(--color-red);
+	background: var(--red);
 	color: #EEE;
     box-shadow: inset 5px 5px 9px rgb(2 2 29 / 77%);
     width: 100px;
@@ -859,8 +876,8 @@ details summary{
 	Footer
 ==============================*/
 .footer {
-	background-color:  var(--color-blue);
-	border-top: 1px solid var(--color-underline);
+	background-color:  var(--blue);
+	border-top: 1px solid var(--underline);
   }
   .footer__content {
 	display: flex;
@@ -883,7 +900,7 @@ details summary{
 	display: block;
   }
   .footer__nav {
-	background:  var(--color-blue);
+	background:  var(--blue);
     order: 2;
     display: flex;
     flex-direction: flex-start;
@@ -1152,7 +1169,7 @@ details summary{
 		transition: all .3s ease-in;
 		border-radius: 10px;
 		width: 200px;
-		height: 300px;
+		height: 275px !important;
 	}
 	.content .boxImgs:hover .Img{
 		transform: scale(0.9);
@@ -1212,11 +1229,13 @@ details summary{
 		font-size: 15px;
 	}
 	header .box span{
+		width: 98px;
 		font-size: 13px;
+		text-align: center;
 	}
 	.down-watch .watch,.down-watch .down{
-		padding: 13px 5px !important;
-		font-size: 18px!important;
+		padding: 8px 5px !important;
+		font-size: 16px!important;
 		color: var(--darkMode);
 		border-radius: 10px;
 		box-shadow: none;
@@ -1259,8 +1278,7 @@ details summary{
 	}
 	/* Titele page */
 	h3{
-		font-size: 17px !important;
-		letter-spacing: normal !important;
+		font-size: 22px !important;
 	}
 	/* Cast */
 	main .cast img {

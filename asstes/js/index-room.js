@@ -70,7 +70,7 @@ $(document).ready(function() {
 		$(".dropMovie").fadeToggle(1);
 	});
 });
-// ================= active btn Number More Cards =================
+// ================= active btn Number  =================
 $(document).ready(function() {
 	$(".moreCard .numNav a").click(function () {
 		if (!$(this).hasClass("active")) {
@@ -79,9 +79,6 @@ $(document).ready(function() {
 				.removeClass("active");
 		}
 	});
-});
-// ================= active btn Number More Cards =================
-$(document).ready(function() {
 	$(".li").click(function () {
 		if (!$(this).hasClass("active")) {
 			$(this).addClass("active")
@@ -89,7 +86,22 @@ $(document).ready(function() {
 				.removeClass("active");
 		}
 	});
+	$(".episode .numNav a").click(function () {
+		if (!$(this).hasClass("active")) {
+			$(this).addClass("active")
+				.siblings(".episode .numNav a")
+				.removeClass("active");
+		}
+	});
+	$(".Season .numNav a").click(function () {
+		if (!$(this).hasClass("active")) {
+			$(this).addClass("active")
+				.siblings(".Season .numNav a")
+				.removeClass("active");
+		}
+	});
 });
+
 // =========================== Icon Top  ===========================
 
 // Get the button

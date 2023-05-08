@@ -18,7 +18,7 @@
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
 	<!--  Style css -->
     <link href="./asstes/css/style-room.css" rel="stylesheet">
-    <title>Sections</title>
+    <title>Show Room</title>
 </head>
 <body>
 
@@ -39,29 +39,29 @@
         <div class="head "> 
             <div class="w-100 pb-4 d-flex justify-content-between" style="border-bottom: 1px solid #eeeeee42; ">
                 <span class="userAside"><span><i class="fa-solid fa-user-pen fa-xl"></i></span> jack bill</span>
-                <button id="closeSlider" class="d-lg-none"><i class="fa-regular fa-xmark fa-xl text-white mx-3"></i></button>
+                <button id="closeSlider" class="d-lg-none"><i class="fa-regular fa-xmark fa-xl mx-3"></i></button>
             </div>
         </div>
         <!-- navbar slider -->
-        <li class="listItem d-flex justify-content-between py-1 my-0">
-            <button class="icon d-inline-block d-lg-none themeicons text-warning">
+        <li class="btnfixed d-flex justify-content-between py-1 my-0">
+            <button class="icon d-inline-block d-lg-none themeicons">
                 <i  class="fa-light fa-moon fa-lg themeicon "></i>
                 <i  class="fa-light fa-lightbulb-on fa-lg themeicon d-none"></i>
             </button>
-            <a href="#" class="d-inline-block d-lg-none text-warning">
+            <a href="#" class="d-inline-block d-lg-none">
                 <i  class="fa-light fa-bell-on fa-lg"></i>
             </a>
-            <a href="#" class="d-inline-block d-lg-none text-warning">
+            <a href="#" class="d-inline-block d-lg-none">
                 <i class="fa-light fa-heart fa-lg"></i>
             </a>
         
         </li>
         <!-- Items -->
         <div class="itemAside">
-            <ui class="listAside">
+            <ul class="listAside">
                 <li class="listItem"><i class="fa-light fa-house fa-lg mr-4"></i> <a href="./index.html">Home</a></li>
                 <li class="listItem"><i class="fa-regular fa-chart-line-up fa-lg mr-4"></i> <a href="#">News</a></li>
-                <li class="listItem"><i class="fa-light fa-user fa-lg mr-4"></i> <a class="text-white" href="#">Profile</a></li>
+                <li class="listItem"><i class="fa-light fa-user fa-lg mr-4"></i> <a href="#">Profile</a></li>
                 <li class="listItem"><i class="fa-light fa-screwdriver-wrench fa-lg mr-4"></i></i> <a href="#">Admin</a></li>
                 <li class="listItem"><i class="fa-light fa-coins fa-lg mr-4"></i><a href="#"> Pricing plans</a></li>
                 <li class="listItem"><i class="fa-light fa-file-signature fa-lg mr-4"></i> <a href="#">Contacts</a></li>
@@ -69,28 +69,28 @@
                 <li class="listItem"><i class="fa-light fa-gear fa-lg mr-4"></i> <a href="#">About-Us</a></li>
                 
                 <li id="btn-series" class="listItem btnAction">
-                    <i class="fa-light fa-clapperboard-play fa-lg mr-4"></i> <a class="" href="#">Series</a> <i class="fa-light fa-chevron-down fa-2xs"></i>
-                    <ui>
+                    <i class="fa-light fa-clapperboard-play fa-lg mr-4"></i> <a href="#">Series</a> <i class="fa-light fa-chevron-down fa-2xs"></i>
+                    <ul>
                         <li class="dropSeries"><a href="#">English Series</a></li>
                         <li class="dropSeries"><a href="#">Arabic Series</a></li>
                         <li class="dropSeries"><a href="#">asia Series</a></li>
                         <li class="dropSeries"><a href="#">Indian Series</a></li>
                         <li class="dropSeries"><a href="#">Turkish Series</a></li>
                         <li class="dropSeries"><a href="#">Anime Series</a></li>
-                    </ui>
+                    </ul>
                 </li>
                 <li id="btn-movies" class="listItem">
-                    <i class="fa-light fa-popcorn fa-lg mr-4"></i> <a class="text-white" href="#"><button class="text-white">Movies</button></a> <i class="fa-light fa-chevron-down fa-2xs"></i>
-                    <ui>
+                    <i class="fa-light fa-popcorn fa-lg mr-4"></i> <a href="#"><button>Movies</button></a> <i class="fa-light fa-chevron-down fa-2xs"></i>
+                    <ul>
                         <li class="dropMovie"><a href="#">English movies</a></li>
                         <li class="dropMovie"><a href="#">Arabic Movies</a></li>
                         <li class="dropMovie"><a href="#">asia movies</a></li>
                         <li class="dropMovie"><a href="#">Indian movies</a></li>
                         <li class="dropMovie"><a href="#">Turkish movies</a></li>
                         <li class="dropMovie"><a href="#">Anime movies</a></li>
-                    </ui>
+                    </ul>
                 </li>
-            </ui>
+            </ul>
         </div>
     </aside>
 
@@ -113,7 +113,7 @@
             <a href="./index.html" class="logo">Blur.<span>TV</span></a>
             <!-- tools nsv -->
             <div class="d-md-none d-lg-inline-block toolsNav">
-                <ui class="item-nav d-none d-md-flex">
+                <ul class="item-nav d-none d-md-flex">
                     <li><a class="hvr" href="index.html">Home</a></li>
                     <li><a class="hvr" href="./Seaction.html">News</a></li>
                     <li class="position-relative">
@@ -149,7 +149,7 @@
                             <a href="#">Pricing plans</a>
                         </div>
                     </li>
-                </ui>
+                </ul>
             </div>
            <!-- icons -->
             <div class="iconsnav">
@@ -161,9 +161,9 @@
                     <i  class="fa-solid fa-lightbulb-on fa-lg themeicon btnLight text-warning"></i>
                     <i  class="fa-light fa-moon fa-lg themeicon d-none"></i>
                 </button>
-                <ui class="icon d-none d-md-flex">
+                <ul class="icon d-none d-md-flex">
                     <a href="">Sign in</a>
-                </ui>
+                </ul>
                 <button id="openSlider" class="d-lg-none">
                     <i class="fa-light fa-bars-staggered fa-lg"></i>
                 </button>
@@ -189,7 +189,7 @@
                         </p>
                     </video>
                 </div>
-                <div class="col-lg-5 boxtable my-5">
+                <div class="col-lg-5 col-12 boxtable my-5">
                     <ul>
                         <li class="server">Quality</li>
                         <li class="li active">1080-p</li>
@@ -216,219 +216,262 @@
         </div>
     </header>
     <!-- End  -->
-    
-    <main class="content my-5">
-         <div class="container-custom">
+
+    <!-- Episodes -->
+    <main class="Eqisodes my-5">
+        <div class="container-custom">
             <!-- Title Section -->
-         <div class="w-100 pb-2 mb-2 titleSections">
-            <h3 style="letter-spacing: 10px;">Episodes (25) </h3>
-            <span>Season</span>
+            <div class="w-100 pb-2 mb-2 titleSections">
+                <h3>Episodes (25) </h3>
+                <span class="d-none-740">Season</span>
+            </div>
+            <div class="productRow">
+                <div class="col mb-5">
+                    <!-- Number More Cards -->
+                    <div class="episode py-2">
+                        <span class="numNav">
+                            <a href="#"><span>1</span>Episode</a>
+                            <a href="#"><span>2</span>Episode</a>
+                            <a href="#"><span>3</span>Episode</a>
+                            <a href="#"><span>4</span>Episode</a>
+                            <a class="active" href="#"><span>5</span>Episode</a>
+                            <a href="#"><span>6</span>Episode</a>
+                            <a href="#"><span>7</span>Episode</a>
+                            <a href="#"><span>8</span>Episode</a>
+                            <a href="#"><span>9</span>Episode</a>
+                            <a href="#"><span>10</span>Episode</a>
+                            <a href="#"><span>11</span>Episode</a>
+                            <a href="#"><span>12</span>Episode</a>
+                            <a href="#"><span>13</span>Episode</a>
+                            <a href="#"><span>14</span>Episode</a>
+                            <a href="#"><span>15</span>Episode</a>
+                            <a href="#"><span>16</span>Episode</a>
+                            <a href="#"><span>17</span>Episode</a>
+                            <a href="#"><span>18</span>Episode</a>
+                            <a href="#"><span>19</span>Episode</a>
+                            <a href="#"><span>20</span>Episode</a>
+                            <a href="#"><span>21</span>Episode</a>
+                            <a href="#"><span>22</span>Episode</a>
+                            <a href="#"><span>23</span>Episode</a>
+                            <a href="#"><span>24</span>Episode</a>
+                            <a href="#"><span>25</span>Episode</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="w-100-740">
+                    <span class="d-none titleSeason mb-3" >Season</span>
+                     <!-- Number More Cards -->
+                     <div class="Season py-2">
+                        <span class="numNav">
+                            <a href="#">Season<span>1</span></a>
+                            <a class="active" href="#">Season<span>2</span></a>
+                            <a href="#">Season<span>3</span></a>
+                            <a href="#">Season<span>4</span></a>
+                            <a href="#">Season<span>5</span></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="owl-carousel owl-theme row">
-            <div class="col-2 boxImgs">
-                <section class="itemsCard">
-                    <div class="overlaycards"></div>
-                    <div class="Img">
-                        <img src="./asstes/img/1.jfif" alt="">
-                    </div>
-                    <h6 class="titlefilm">Alice Through the Looking </h6>
-                </section>
-                <div class="detailsCards">
-                    <div>
-                        <h4 class="text-white">5.<small>9</small></h4>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
-                    </div>
-                    <div class="watchNow">
-                        <i class="fa-thin fa-circle-play fa-2xl"></i>
-                        <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                    </div>
-                    <section class="boxType">
-                        <p class="btntype">Action</p>
-                        <p class="btntype">Fantasy</p>
+    </main>
+    <!-- End  -->
+   
+    <!-- Similar Offers -->
+    <main class="content my-5">
+        <div class="container-custom">
+            <!-- Title Section -->
+            <div class="w-100 pb-2 mb-2 titleSections">
+                <h3 style="letter-spacing: 10px;">Similar Offers</h3>
+            </div>
+            <div class="owl-carousel owl-theme row">
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/1.jfif" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
                     </section>
-                    <section class="boxTrailer">
-                        <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
-                        <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <div class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
+                        </div>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/9.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
                     </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <div class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
+                        </div>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/3.png" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <div class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
+                        </div>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/4.webp" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <div class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
+                        </div>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/8.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <div class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
+                        </div>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/8.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <div class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
+                        </div>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                        </section>
+                    </div>
                 </div>
             </div>
-            <div class="col-2 boxImgs">
-                <section class="itemsCard">
-                    <div class="overlaycards"></div>
-                    <div class="Img">
-                        <img src="./asstes/img/9.jpg" alt="">
-                    </div>
-                    <h6 class="titlefilm">Alice Through the Looking </h6>
-                </section>
-                <div class="detailsCards">
-                    <div>
-                        <h4 class="text-white">5.<small>9</small></h4>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
-                    </div>
-                    <div class="watchNow">
-                        <i class="fa-thin fa-circle-play fa-2xl"></i>
-                        <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                    </div>
-                    <section class="boxType">
-                        <p class="btntype">Action</p>
-                        <p class="btntype">Fantasy</p>
-                    </section>
-                    <section class="boxTrailer">
-                        <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
-                        <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
-                    </section>
-                </div>
-            </div>
-            <div class="col-2 boxImgs">
-                <section class="itemsCard">
-                    <div class="overlaycards"></div>
-                    <div class="Img">
-                        <img src="./asstes/img/3.png" alt="">
-                    </div>
-                    <h6 class="titlefilm">Alice Through the Looking </h6>
-                </section>
-                <div class="detailsCards">
-                    <div>
-                        <h4 class="text-white">5.<small>9</small></h4>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
-                    </div>
-                    <div class="watchNow">
-                        <i class="fa-thin fa-circle-play fa-2xl"></i>
-                        <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                    </div>
-                    <section class="boxType">
-                        <p class="btntype">Action</p>
-                        <p class="btntype">Fantasy</p>
-                    </section>
-                    <section class="boxTrailer">
-                        <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
-                        <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
-                    </section>
-                </div>
-            </div>
-            <div class="col-2 boxImgs">
-                <section class="itemsCard">
-                    <div class="overlaycards"></div>
-                    <div class="Img">
-                        <img src="./asstes/img/4.webp" alt="">
-                    </div>
-                    <h6 class="titlefilm">Alice Through the Looking </h6>
-                </section>
-                <div class="detailsCards">
-                    <div>
-                        <h4 class="text-white">5.<small>9</small></h4>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
-                    </div>
-                    <div class="watchNow">
-                        <i class="fa-thin fa-circle-play fa-2xl"></i>
-                        <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                    </div>
-                    <section class="boxType">
-                        <p class="btntype">Action</p>
-                        <p class="btntype">Fantasy</p>
-                    </section>
-                    <section class="boxTrailer">
-                        <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
-                        <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
-                    </section>
-                </div>
-            </div>
-            <div class="col-2 boxImgs">
-                <section class="itemsCard">
-                    <div class="overlaycards"></div>
-                    <div class="Img">
-                        <img src="./asstes/img/8.jpg" alt="">
-                    </div>
-                    <h6 class="titlefilm">Alice Through the Looking </h6>
-                </section>
-                <div class="detailsCards">
-                    <div>
-                        <h4 class="text-white">5.<small>9</small></h4>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
-                    </div>
-                    <div class="watchNow">
-                        <i class="fa-thin fa-circle-play fa-2xl"></i>
-                        <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                    </div>
-                    <section class="boxType">
-                        <p class="btntype">Action</p>
-                        <p class="btntype">Fantasy</p>
-                    </section>
-                    <section class="boxTrailer">
-                        <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
-                        <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
-                    </section>
-                </div>
-            </div>
-            <div class="col-2 boxImgs">
-                <section class="itemsCard">
-                    <div class="overlaycards"></div>
-                    <div class="Img">
-                        <img src="./asstes/img/8.jpg" alt="">
-                    </div>
-                    <h6 class="titlefilm">Alice Through the Looking </h6>
-                </section>
-                <div class="detailsCards">
-                    <div>
-                        <h4 class="text-white">5.<small>9</small></h4>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                        <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
-                    </div>
-                    <div class="watchNow">
-                        <i class="fa-thin fa-circle-play fa-2xl"></i>
-                        <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                    </div>
-                    <section class="boxType">
-                        <p class="btntype">Action</p>
-                        <p class="btntype">Fantasy</p>
-                    </section>
-                    <section class="boxTrailer">
-                        <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
-                        <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
-                    </section>
-                </div>
-            </div>
-         </div>
-        </div>
-        
-        <!-- Number More Cards -->
-        <div class="moreCard p-1">
-            <a href="#">
-                <i class="fa-light fa-arrow-left fa-lg"></i>
-            </a>
-            <span class="numNav">
-                <a class="active" href="#">1</a>
-                <a class="d-none-590" href="#">2</a>
-                <a class="d-none-590" href="#">3</a>
-                <a class="" href="#">22</a>
-            </span>
-            <a href="#">
-                <i class="fa-light fa-arrow-right fa-lg"></i>
-            </a>
-        </div>
+        </div>        
     </main>
     <!-- End  -->
 
@@ -478,11 +521,11 @@
     <script src="asstes/js/jquery.nicescroll.js"></script>
     <!--nice scroll-->
     <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+    <script src="//path/to/videojs-contrib-quality-levels.min.js"></script>
+    <script src="//path/to/video.min.js"></script>
     
     <!-- Js Index Java Script -->
     <script src="asstes/js/index-room.js"></script>
   
-    <script src="//path/to/video.min.js"></script>
-    <script src="//path/to/videojs-contrib-quality-levels.min.js"></script>
 </body>
 </html>

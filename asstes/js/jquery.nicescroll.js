@@ -3160,9 +3160,19 @@
 // ============= niceScroll html =============
 
 $(document).ready(function(){	
-	  $("html, aside,p, ul").niceScroll({
+	  $("html").niceScroll({
     cursorcolor: '#5568DF',
     cursorwidth: '5px',
-    scrollspeed:60,
-});
+    scrollspeed:100,
+  });
+  $("aside").niceScroll({
+    cursorcolor: '#5568DF',
+    cursorwidth: '10px',
+    scrollspeed:100,
+  });
+  $(".episode").niceScroll({
+    cursorcolor: '#5568DF',
+    cursorwidth: '0',
+    scrollspeed:100,
+  });
 });

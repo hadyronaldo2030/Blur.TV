@@ -31,13 +31,13 @@ Primary use:	FlixTV HTML Template
 ==============================*/
 
 a { text-decoration: none;}
-
+clip: rect(0,0,0,0);
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-ui{list-style:none;}
+ul{list-style:none;}
 
 /*==============================
 Theme Dark & light
@@ -47,10 +47,14 @@ Theme Dark & light
 	--darkMode: rgba(9,18,32,1);
 	--yellow: orange;
 	--red: #0051ff;
+	--blue-red: #FF0000;
+	--red-blue: #0051ff;
 	--blue-white: #eeeeee;
 	--mov: #4b4b4f;
+	--blue: #eeeeee;
 	--blue2: #cedfff;
 	--blue3: #0051ff;
+	--aside: #ffffff;
 	--head: #091226;
 	--yellow-blue: #0f1a32;
 	--gray-blue: #3C4B57;
@@ -65,13 +69,17 @@ html[data-theme="lightMode"]{
 	--darkMode: #EEE;
 	--lightMode: rgba(9,18,32,1);
 	--yellow: #F7FF00;
+	--red-blue: #FF0000;
+	--blue-red: #0051ff;
 	--red: #FF0000;
 	--blue-white: #0B1538;
 	--head: #09122600;
 	--yellow-blue: #F7FF00;
 	--mov: #111C5F;
-	--blue2: #091226;
+	--blue: #0B1538;
+	--blue2: rgba(9,18,32,1);
 	--blue3: #091226;
+	--aside: #0b1538d1;
 	--gray-blue: #091226;
 	--gray: #35363a00;
 	--underline: #eeeeee42;
@@ -97,7 +105,7 @@ Navbar
 nav {
 width: 100%;
 height: 70px;
-background: var(--color-blue2);
+background: var(--blue2);
 padding-top: 10px;
 transition: all 1s;
 }
@@ -117,7 +125,7 @@ nav .container-custom{
 	display: inline-block;
 	color: var(--darkMode);
 }
-.logo span{color: var(--color-yellow);}
+.logo span{color: var(--yellow);}
 /*...... End logo .......*/
 
 /*......  tools nsv .......*/
@@ -141,12 +149,10 @@ nav .item-nav li:hover  {
 	height: 23px;
 }
 nav .item-nav li:hover .hvr {
-	border-bottom: 3px solid var(--color-yellow);
+	border-bottom: 3px solid var(--yellow);
 	color: var(--darkMode);
 }
-.activeNavBar{
-	height: 200px;
-}
+
 .activeNavBar{
 	border-bottom: 3px solid #94ff52;
 	color: #c6c0c0;
@@ -181,10 +187,10 @@ nav .item-nav li:hover .dropdownList {
 }
 /* icons navbar */
 nav .iconsnav{
-    width: 213px;
+	width: 213px;
     display: inline-flex;
-    justify-content: space-around;
-    margin-top: 7px;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 nav .iconsnav .icon{
@@ -192,6 +198,7 @@ nav .iconsnav .icon{
 	color: var(--darkMode);
 	display: flex;
 	justify-content: space-around;
+	margin: auto;
 }
 button{
 	background: none;
@@ -212,7 +219,7 @@ button{
 	width: 100%;
 	height: 100%;
 	backdrop-filter: blur(10px);
-	background: var(--color-opacity);
+	background: var(--opacity);
 	color: var(--darkMode);
 	position: fixed;
 	top: 0;
@@ -231,7 +238,7 @@ button{
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
-    background: var(--color-blue);
+    background: var(--blue);
     border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 	transition: all .5s ease;
@@ -249,7 +256,7 @@ button{
 #sectionSearch form:hover{
 	border:1px solid #fbff0032;
     box-shadow:  2px 2px 22px rgba(83, 47, 114, 0.593);    
-    background: var(--color-mov);
+    background: var(--mov);
 }
 #sectionSearch form svg{
 	transition: all .5s ease;
@@ -285,34 +292,42 @@ aside{
     height: 100vh;
 	overflow-y: scroll;
     backdrop-filter: blur(10px);
-    /* background: linear-gradient(180deg, rgb(10 50 56 / 98%) 0%, rgba(23, 43, 122, 0.795) 60%, #091226 86%); */
-	background: #101e52e9;
+	background: var(--aside);
     z-index: 100;
 }
 aside .head{
 	padding: 20px;
 }
+
+.btnfixed{
+	height: 160px;
+    position: absolute;
+    right: 30px;
+    top: 110px;
+    display: flex !important;
+    flex-direction: column;
+}
 aside .userAside{ 
 	font-size: 20px!important;
-    color: #EEE;
+    color: var(--darkMode);
 }
 aside .userAside span{ 
 	font-size: 20px!important;
-    color: #091226;
-    background: #EEE;
+    color: var(--darkMode);
+    background: var(--lightMode);
     border-radius: 10px;
     padding: 10px;
 	margin-right: 10px;
 }
-aside .listItem{
+aside .listItem, #btn-movies{
 	padding: 20px;
 	transition: all .5s ease;
-    color: #EEE!important;
+    color: var(--darkMode);
     font-size: 16px;
 }
-aside li:hover{
+aside .listItem:hover{
     border-left: 4px solid #009aff;
-    background: rgb(0 255 194 / 5%);
+    background: rgba(98, 0, 255, 0.273);
 }
 aside .active{
     border-left: 4px solid #009aff !important;
@@ -325,7 +340,8 @@ aside .dropMovie, .dropSeries{
 	transition: all .5s ease;
 	display: none;
 }
-aside a{color: #EEE;}
+aside a{color: var(--darkMode);
+}
 /*==============================
 	Header Video player 
 ==============================*/
@@ -382,11 +398,13 @@ header{
     flex-direction: column;
     transition: all 1s ease;
     align-content: flex-end;
+	padding:0;
 }
 .boxtable .server {
     background: #081f70;
 	color: #fff;
     font-weight: bold;
+	min-width:90px;
 }
 .boxtable li{
 	background: var(--blue-white);
@@ -396,9 +414,9 @@ header{
     width: 121px;
     text-align: center;
 	cursor: pointer;
-	transition: all 1s ease;
-    box-shadow: 3px 4px 15px #000;
-    margin: 10px 0 20px 0;
+	transition: all 1s ease;    
+	box-shadow: 0px 4px 15px #000;
+    margin:10px 10px 20px 10px
 }
 .boxtable .li:hover{
 	color: #000!important;
@@ -407,12 +425,105 @@ header{
 }
 .boxtable .active{
 	background: var(--red);
-	color:#EEE;
+	color:#EEE !important;
     box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%);
 }
 /*...... End Header .......*/
 
 
+/*==============================
+	Episodes
+==============================*/
+.titleSections{
+	display: inline-flex;
+    border-bottom: 1px solid var(--underline);
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	letter-spacing: 10px
+}
+.titleSections span{
+	font-size: 22px
+}
+.episode{
+	background: var(--blue);
+	max-height: 326px ;
+	overflow-y: scroll;
+	border-radius: 15px;
+	padding: 0 10px
+
+}
+.episode .numNav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.episode .numNav a{
+	background: var(--blue2);
+    padding-right: 10px;
+    margin: 10px 5px;
+    width: 30%;
+    max-width: 200px;
+	min-width: 115px;
+    border-radius: 15px;
+    display: flex;
+    color: var(--darkMode);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: -9px 4px 15px #000;
+    transition: all 1s ease;   
+}
+/* Season */
+.Season{
+	background: var(--blue);
+	border-radius: 15px;
+	max-width: 240px;
+	padding: 0 10px
+}
+.Season .numNav{
+	width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Season .numNav a{
+	background: var(--blue2);
+	padding-left: 10px;
+    margin: 10px 5px;
+    width: 200px;
+    border-radius: 15px;
+	display: flex;
+    color: var(--darkMode);
+    align-items: center;
+    justify-content: space-between;
+	box-shadow: -9px 4px 15px #000;
+	transition: all 1s ease;    
+}
+.Season .numNav a span, .episode .numNav a span{
+	background: var(--blue-red);
+    color: #EEE;
+    min-width: 42px;
+    height: 42px;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+.Season .numNav a:hover, .episode .numNav a:hover{
+	color: #000!important;
+	background: #fcffff;
+    box-shadow: inset 1px 1px 12px rgb(28 29 2 / 90%);
+}
+.Season .numNav .active span, .episode .numNav .active span{
+	background: var(--red-blue);
+    color: #EEE;
+	box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%);
+
+}
+/*...... End Episodes .......*/
 
 
 /*==============================
@@ -421,13 +532,7 @@ header{
 .content h3 {
 	color: var(--darkMode);
 }
-.titleSections{
-	display: inline-flex;
-    border-bottom: 1px solid var(--color-underline);
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+
 .my-10{margin:40px auto}
 .content{
 	display: contents;
@@ -512,11 +617,11 @@ header{
 .boxImgs .detailsCards{
 	position: absolute;
     top: 0;
-	width: 210px;
+	width: 200px;
     height: 100%;
     padding: 21px;
     text-align: center;
-    color: var(--color-yellow);
+    color: var(--yellow);
     z-index: 2;
     justify-content: space-between;
     flex-direction: column;
@@ -540,7 +645,7 @@ header{
     margin-top: 25px;
 }
 .detailsCards .boxType  .btntype{
-	background: var(--color-yellow);
+	background: var(--yellow);
 	color: #091226;
     font-weight: bold;
     max-width: 130px;
@@ -615,7 +720,7 @@ header{
 }
 .moreCard .numNav .active{
     height: 100%;
-	background: var(--color-red);
+	background: var(--red);
     box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%);
 }
 
@@ -650,7 +755,7 @@ header{
 	display: block;
   }
   .footer__nav {
-	background:  var(--color-blue);
+	background:  var(--blue);
     order: 2;
     display: flex;
     flex-direction: flex-start;
@@ -822,7 +927,6 @@ header{
 	.d-inline-block-990{
 		display: inline-block;
 	}
-
 	/* video */
 	.video-js {
 		max-height: 410px;
@@ -832,7 +936,12 @@ header{
 		margin: 30px auto;
 		height: 270px;
 	}
-	
+	/* Season */
+	.Season .numNav a{
+		width: 100%;
+		max-width: 200px;
+	}
+	/* card */
 	.content .boxImgs .itemsCard{
 		position: absolute;
 		border-radius: 10px;
@@ -865,7 +974,7 @@ header{
 		transition: all .3s ease-in;
 		border-radius: 10px;
 		width: 200px;
-		height: 300px;
+		height: 275px !important;
 	}
 	.content .boxImgs .titlefilm {
 		font-size: 13px;
@@ -900,16 +1009,30 @@ header{
 	.d-none-740{
 		display: none!important;
 	}
-	.d-inline-block-740{
-		display: inline-block!important;
+	.d-flex-740{
+		display: flex!important;
 	}
-	
+	/* Season */
+	.w-100-740{
+		width: 100%;
+	}
+	.titleSeason{
+		display: block!important;
+		font-size:22px;
+		text-align:center;
+		letter-spacing: 10px;
+	}
+	.Season{margin: auto }	
+	.Season .numNav a{
+		width: 100%;
+	}
 	/* video */
 	.video-js {
 		max-height: 290px;
 	}
 	.boxtable li {
-		margin: 10px 5px 20px 5px !important;
+		box-shadow: 0px 4px 15px #000;
+		margin: 10px 10px 20px 10px !important;
 	}
 }
 @media (max-width: 600px) {
@@ -923,7 +1046,14 @@ header{
 	h4{font-size:19px}
 	/* video */
 	.video-js {
+		border-radius:10px;
 		max-height: 230px;
+	}
+	.container-custom {
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
 	}
 }
 @media (max-width: 450px) {
@@ -945,7 +1075,7 @@ header{
 		max-height: 183px;
 	}
 	.titleSections h3{
-		font-size: 23px;
+		font-size: 21px;
 	}	
 	.titleSections{
 		justify-content: center;
@@ -966,6 +1096,10 @@ header{
 	.boxtable ul li{
 		width: 91%;
 		font-size: 14px;
+	}
+	/* Season */
+	.Season {
+		max-width: 100%;
 	}
 	/* Search */
 	#sectionSearch form{
