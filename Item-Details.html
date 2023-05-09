@@ -15,6 +15,7 @@
 	<!--  font Awesome -->
 	<link href="asstes/fonts/all.min.css" rel="stylesheet">
 	<!--  Style css -->
+    <link href="asstes/css/style-shared.css" rel="stylesheet">
 	<link href="asstes/css/style-item.css" rel="stylesheet">
     <title>Item-Detalis</title>
 </head>
@@ -44,14 +45,14 @@
         <!-- navbar slider -->
         <li class="btnfixed d-flex justify-content-between py-1 my-0">
             <button class="icon d-inline-block d-lg-none themeicons">
-                <i  class="fa-light fa-moon fa-lg themeicon "></i>
-                <i  class="fa-light fa-lightbulb-on fa-lg themeicon d-none"></i>
+                <i  class="fa-solid fa-moon fa-lg themeicon "></i>
+                <i  class="fa-solid fa-lightbulb-on fa-lg themeicon d-none"></i>
             </button>
             <a href="#" class="d-inline-block d-lg-none">
-                <i  class="fa-light fa-bell-on fa-lg"></i>
+                <i  class="fa-solid fa-bell-on fa-lg"></i>
             </a>
             <a href="#" class="d-inline-block d-lg-none">
-                <i class="fa-light fa-heart fa-lg"></i>
+                <i class="fa-solid fa-heart fa-lg"></i>
             </a>
         
         </li>
@@ -89,12 +90,14 @@
                         <li class="dropMovie"><a href="#">Anime movies</a></li>
                     </ul>
                 </li>
+                <li class="listItem"><i class="fa-light fa-right-from-bracket fa-lg mr-4"></i> <a href="#">Log out</a></li>
             </ul>
         </div>
     </aside>
+    <!-- End  -->
 
     <!-- Navbar -->
-    <nav>
+    <nav id="navbar">
         <section id="sectionSearch">
             <div class="sectionSearch">
                 <form>
@@ -112,29 +115,29 @@
             <a href="./index.html" class="logo">Blur.<span>TV</span></a>
             <!-- tools nsv -->
             <div class="d-md-none d-lg-inline-block toolsNav">
-                <ui class="item-nav d-none d-md-flex">
-                    <li class="activeNavBar"><a href="index.html">Home</a></li>
-                    <li><a href="#">News</a></li>
+                <ul class="item-nav d-none d-md-flex">
+                    <li><a class="hvr" href="index.html">Home</a></li>
+                    <li><a class="hvr" href="./Seaction.html">News</a></li>
                     <li class="position-relative">
-                        <a href="#">Movies</a> <i class="fa-light fa-chevron-down fa-xs"></i>
+                        <a class="activeNavBar hvr" href="#">Movies</a> <i class="fa-light fa-chevron-down fa-xs"></i>
                         <div class="dropdownList">
-                            <a href="#">English movies</a>
-                            <a href="#">Arabic Movies</a>
-                            <a href="#">asia movies</a>
-                            <a href="#">Indian movies</a>
-                            <a href="#">Turkish movies</a>
-                            <a href="#">Anime movies</a>
+                            <a href="./Seaction.html">English movies</a>
+                            <a href="./Seaction.html">Arabic Movies</a>
+                            <a href="./Seaction.html">asia movies</a>
+                            <a href="./Seaction.html">Indian movies</a>
+                            <a href="./Seaction.html">Turkish movies</a>
+                            <a href="./Seaction.html">Anime movies</a>
                         </div>
                     </li>
                     <li class="position-relative">
-                        <a href="">Series</a> <i class="fa-light fa-chevron-down fa-xs"></i>
+                        <a class="hvr" href="">Series</a> <i class="fa-light fa-chevron-down fa-xs"></i>
                         <div class="dropdownList">
-                            <a href="#">English Series</a>
-                            <a href="#">Arabic Series</a>
-                            <a href="#">asia Series</a>
-                            <a href="#">Indian Series</a>
-                            <a href="#">Turkish Series</a>
-                            <a href="#">Anime Series</a>
+                            <a href="./Seaction.html">English Series</a>
+                            <a href="./Seaction.html">Arabic Series</a>
+                            <a href="./Seaction.html">asia Series</a>
+                            <a href="./Seaction.html">Indian Series</a>
+                            <a href="./Seaction.html">Turkish Series</a>
+                            <a href="./Seaction.html">Anime Series</a>
                         </div>
                     </li>
                     <li class="position-relative">
@@ -148,7 +151,7 @@
                             <a href="#">Pricing plans</a>
                         </div>
                     </li>
-                </ui>
+                </ul>
             </div>
            <!-- icons -->
             <div class="iconsnav">
@@ -160,24 +163,23 @@
                     <i  class="fa-solid fa-lightbulb-on fa-lg themeicon btnLight text-warning"></i>
                     <i  class="fa-light fa-moon fa-lg themeicon d-none"></i>
                 </button>
-                <ui class="icon d-none d-md-flex">
-                    <a href="">Sign in</a>
-                </ui>
+                <a class="icon d-none d-md-flex" href="#">Sign in</a>
                 <button id="openSlider" class="d-lg-none">
                     <i class="fa-light fa-bars-staggered fa-lg"></i>
                 </button>
             </div>
         </div>
     </nav>
+    <!-- End  -->
     
     <!-- header -->
-    <header>
+    <header class="mt-5">
         <div class="overlay">
             <img src="./asstes/img/8.jpg" alt="">
             <div class="overllay"></div>
             <div class="overllay2"></div>
         </div>
-        <div class="container-custom">
+        <div class="container-custom mt-5">
             <div class="row m-lg-0 mt-3">
                 <!-- bubble Trailer -->
                 <section id="bubbleTrailer">
@@ -545,7 +547,7 @@
                             <section class="footerComment">
                                 <span style="cursor: pointer;">Replay <i class="fa-duotone fa-reply-all fa-lg"></i></span>
                                 <span class="likeComment"><i class="fa-solid fa-thumbs-up fa-flip-horizontal fa-lg"></i> Like
-                                    <ui class="hvr-emojy">
+                                    <ul class="hvr-emojy">
                                         <li><i class="fa-solid fa-face-surprise fa-xl"></i></li>
                                         <li><i class="fa-solid fa-face-sad-cry fa-xl"></i></li>
                                         <li><i class="fa-solid fa-face-grin-hearts fa-xl"></i></li>
@@ -566,7 +568,7 @@
                             <section class="footerComment">
                                 <span style="cursor: pointer;">Replay <i class="fa-duotone fa-reply-all fa-lg"></i></span>
                                 <span class="likeComment"><i class="fa-solid fa-thumbs-up fa-flip-horizontal fa-lg"></i> Like
-                                    <ui class="hvr-emojy">
+                                    <ul class="hvr-emojy">
                                         <li><i class="fa-solid fa-face-surprise fa-xl"></i></li>
                                         <li><i class="fa-solid fa-face-sad-cry fa-xl"></i></li>
                                         <li><i class="fa-solid fa-face-grin-hearts fa-xl"></i></li>
@@ -589,7 +591,7 @@
                                 <section class="footerComment">
                                     <span style="cursor: pointer;">Replay <i class="fa-duotone fa-reply-all fa-lg"></i></span>
                                     <span class="likeComment"><i class="fa-solid fa-thumbs-up fa-flip-horizontal fa-lg"></i> Like
-                                        <ui class="hvr-emojy">
+                                        <ul class="hvr-emojy">
                                             <li><i class="fa-solid fa-face-surprise fa-xl"></i></li>
                                             <li><i class="fa-solid fa-face-sad-cry fa-xl"></i></li>
                                             <li><i class="fa-solid fa-face-grin-hearts fa-xl"></i></li>
@@ -610,7 +612,7 @@
                                 <section class="footerComment">
                                     <span style="cursor: pointer;">Replay <i class="fa-duotone fa-reply-all fa-lg"></i></span>
                                     <span class="likeComment"><i class="fa-solid fa-thumbs-up fa-flip-horizontal fa-lg"></i> Like
-                                        <ui class="hvr-emojy">
+                                        <ul class="hvr-emojy">
                                             <li><i class="fa-solid fa-face-surprise fa-xl"></i></li>
                                             <li><i class="fa-solid fa-face-sad-cry fa-xl"></i></li>
                                             <li><i class="fa-solid fa-face-grin-hearts fa-xl"></i></li>

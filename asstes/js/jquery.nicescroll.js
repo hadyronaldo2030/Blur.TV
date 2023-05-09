@@ -3170,7 +3170,7 @@ $(document).ready(function(){
     cursorwidth: '10px',
     scrollspeed:100,
   });
-  $(".episode").niceScroll({
+  $(".episode, p, .dropdown-menu").niceScroll({
     cursorcolor: '#5568DF',
     cursorwidth: '0',
     scrollspeed:100,

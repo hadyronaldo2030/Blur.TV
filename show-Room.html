@@ -17,7 +17,8 @@
     <!-- Video.js base CSS -->
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
 	<!--  Style css -->
-    <link href="./asstes/css/style-room.css" rel="stylesheet">
+    <link href="asstes/css/style-shared.css" rel="stylesheet">
+    <link href="asstes/css/style-room.css" rel="stylesheet">
     <title>Show Room</title>
 </head>
 <body>
@@ -60,14 +61,14 @@
         <!-- navbar slider -->
         <li class="btnfixed d-flex justify-content-between py-1 my-0">
             <button class="icon d-inline-block d-lg-none themeicons">
-                <i  class="fa-light fa-moon fa-lg themeicon "></i>
-                <i  class="fa-light fa-lightbulb-on fa-lg themeicon d-none"></i>
+                <i  class="fa-solid fa-moon fa-lg themeicon "></i>
+                <i  class="fa-solid fa-lightbulb-on fa-lg themeicon d-none"></i>
             </button>
             <a href="#" class="d-inline-block d-lg-none">
-                <i  class="fa-light fa-bell-on fa-lg"></i>
+                <i  class="fa-solid fa-bell-on fa-lg"></i>
             </a>
             <a href="#" class="d-inline-block d-lg-none">
-                <i class="fa-light fa-heart fa-lg"></i>
+                <i class="fa-solid fa-heart fa-lg"></i>
             </a>
         
         </li>
@@ -105,12 +106,14 @@
                         <li class="dropMovie"><a href="#">Anime movies</a></li>
                     </ul>
                 </li>
+                <li class="listItem"><i class="fa-light fa-right-from-bracket fa-lg mr-4"></i> <a href="#">Log out</a></li>
             </ul>
         </div>
     </aside>
+    <!-- End  -->
 
     <!-- Navbar -->
-    <nav>
+    <nav id="navbar">
         <section id="sectionSearch">
             <div class="sectionSearch">
                 <form>
@@ -166,7 +169,7 @@
                     </li>
                 </ul>
             </div>
-           <!-- icons -->
+        <!-- icons -->
             <div class="iconsnav">
                 <button id="open" class="icon">
                     <i class="fa-light fa-magnifying-glass fa-lg"></i>
@@ -176,21 +179,20 @@
                     <i  class="fa-solid fa-lightbulb-on fa-lg themeicon btnLight text-warning"></i>
                     <i  class="fa-light fa-moon fa-lg themeicon d-none"></i>
                 </button>
-                <ul class="icon d-none d-md-flex">
-                    <a href="">Sign in</a>
-                </ul>
+                <a class="icon d-none d-md-flex" href="#">Sign in</a>
                 <button id="openSlider" class="d-lg-none">
                     <i class="fa-light fa-bars-staggered fa-lg"></i>
                 </button>
             </div>
         </div>
     </nav>
+    <!-- End  -->
     
     <!-- header -->
-    <header>
-        <div class="container-custom">
+    <header class="mt-5">
+        <div class="container-custom mt-5">
             <!-- Title Section -->
-            <div class="w-100 pb-2 mb-2 titleVideo">
+            <div class="w-100 pb-2 mb-2 titleVideo mt-5">
                 <h4>Alice Through the Looking </h4>
                 <span class="d-none-600"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></span>
             </div>
@@ -203,6 +205,14 @@
                             <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                         </p>
                     </video>
+                    <div class="liksVid">
+                        <span style="cursor: pointer;">
+                            Share <i class="fa-duotone fa-reply-all fa-lg"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-thumbs-up fa-flip-horizontal fa-lg"></i> 13.K
+                        </span>
+                    </div>
                 </div>
                 <div class="col-lg-5 col-12 boxtable my-5">
                     <ul>
@@ -837,7 +847,7 @@
 			</div>
 		</div>
 	</footer>
-	<!-- end footer -->
+	<!-- end -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
