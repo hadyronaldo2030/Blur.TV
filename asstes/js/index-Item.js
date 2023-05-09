@@ -136,8 +136,8 @@ $(document).ready(function() {
 		$("#bubbleTrailer").fadeToggle();
 		});
 	// hide bop img 
-	$(".close-trailer").click(function(){
-		$("#bubbleTrailer").fadeToggle();
+	$(".close-trailer, #bubbleTrailer").click(function(){
+		$("#bubbleTrailer").fadeOut();
 		});	
 	// Stop trailer after click out 
 	const videos = document.querySelectorAll('iframe')

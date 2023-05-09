@@ -1,9 +1,8 @@
 ☺/*----------------------------------------
 [Master Stylesheet]
 
-Project:	FlixTV HTML Template
+Project:	Blur.TV HTML Template
 Version:	1.0
-Primary use:	FlixTV HTML Template
 ----------------------------------------*/
 /*----------------------------------------
 [Table of contents]
@@ -31,7 +30,6 @@ Primary use:	FlixTV HTML Template
 ==============================*/
 
 a { text-decoration: none;}
-clip: rect(0,0,0,0);
 *{
 	margin: 0;
 	padding: 0;
@@ -63,6 +61,10 @@ Theme Dark & light
 	--opacity1:#eeeeee;
 	--opacity2:#ffd4d645;
 	--opacity3:#f0edff00;
+	--blue-gray-blue: #3C4B57;
+	--bg-gradient:rgba(0, 45, 107, 0);
+	--btn-blur2: #eeeeeeb6;
+	--btn-blur:#eeeeeeb4;
 }
 
 html[data-theme="lightMode"]{
@@ -86,7 +88,11 @@ html[data-theme="lightMode"]{
 	--opacity:rgba(9, 18, 32, 0.895);
 	--opacity1: rgba(9,18,32,1);
 	--opacity2: rgba(0,0,0,0.6980042016806722);
+	--blue-gray-blue: #091226;
 	--opacity3: rgba(0,0,0,0);
+	--bg-gradient:rgba(0, 44, 107, 0.62);
+	--btn-blur:rgba(9,18,32,1);
+	--btn-blur2:rgba(9,18,32,1);
 }
 html,body{
 	background: var(--lightMode);
@@ -419,14 +425,17 @@ header{
     margin:10px 10px 20px 10px
 }
 .boxtable .li:hover{
-	color: #000!important;
+	color: #000;
 	background: #fcffff;
     box-shadow: inset 1px 1px 12px rgb(28 29 2 / 90%);
 }
-.boxtable .active{
+.boxtable ul .active{
 	background: var(--red);
-	color:#EEE !important;
+	color:#EEE!important;
     box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%);
+}
+.boxtable ul .active a{
+	color:#EEE!important;
 }
 /*...... End Header .......*/
 
@@ -447,19 +456,20 @@ header{
 }
 .episode{
 	background: var(--blue);
-	max-height: 326px ;
+	max-height: 326px;
+	min-height: 326px;
 	overflow-y: scroll;
 	border-radius: 15px;
 	padding: 0 10px
 
 }
-.episode .numNav{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: auto;
+.episode .numNav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: auto;
 }
 .episode .numNav a{
 	background: var(--blue2);
@@ -529,15 +539,42 @@ header{
 /*==============================
 	Start Content
 ==============================*/
+/* section View Trailer*/
+#bubbleTrailer {
+	display: none;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background: var(--opacity);
+    color: var(--lightMode);
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 5%;
+    z-index: 100000;
+}
+.sectionTrailer{
+	position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 80vh;
+}
+iframe{
+	border-radius:15px 15px 0  0 ;
+}
+/* end */
+
+/* Cards carousel */
 .content h3 {
 	color: var(--darkMode);
 }
 
 .my-10{margin:40px auto}
 .content{
-	display: contents;
+	position:relative;
+	background: radial-gradient(circle, var(--bg-gradient) 0%, var(--lightMode) 69%, var(--lightMode) 69%, var(--lightMode) 69%);
     width: 100%;
-    height: 300px;
+    padding: 15px 0px 1px;
     color: var(--darkMode);
 }
 .content .boxImgs{
@@ -549,6 +586,7 @@ header{
     height: 310px;
     transition: all .3s ease-in-out;
     z-index: 1;
+	
 }
 .content .boxImgs:hover{
 	z-index: 0; /*test  */
@@ -563,7 +601,7 @@ header{
 	transition: all .3s ease-in-out;
     padding:0px;
 	z-index: 0;
-
+	
 }
 .content .boxImgs:hover .itemsCard{
 	width: auto;
@@ -668,7 +706,49 @@ header{
     width: auto;
     font-size: 14px;
 }
-
+/* arrow Carousel Left & Right */
+.arrow_Carousel{
+	position: absolute;
+    top: 12%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.arrow_Carousel button{
+	background: rgb(0,0,0);
+	width: 145px;
+	height: 400px;
+    padding: 0 20px;
+    z-index: 2;
+}
+.arrow_Carousel .section__nav--next{
+	background: linear-gradient(90deg, var(--btn-blur) 0%, var(--btn-blur2) 51%, rgba(0,0,0,0) 100%);
+}
+.arrow_Carousel .section__nav--prev{
+	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--btn-blur2) 51%, var(--btn-blur) 100%);
+}
+.arrow_Carousel button svg{
+    padding: 10px;
+    font-size: 40px;
+    color: var(--darkMode);
+    border-radius: 50px;
+}
+.owl-dots {
+	margin-top:10px;
+	display: flex;
+    justify-content: center;
+}
+.owl-dots button{
+	background: rgb(166, 166, 166) !important;
+    min-width: 15px;
+    height: 15px;
+    border-radius: 50px;
+	margin: 10px;
+    border: 3px solid #EEE !important;
+}
+.owl-dots .active{
+	background: rgb(59 47 141) !important;
+}
 /* btn more danger */
 .moreCardDanger{
 	width: 100%!important;
@@ -680,6 +760,7 @@ header{
 }
 .moreCardDanger .numNav{
 	height: 100%!important;
+	width: 130px;
 }
 .moreCardDanger .numNav a{
 	box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
@@ -692,38 +773,6 @@ header{
     justify-content: center;
     align-items: center;
 }
-
-/* Number More Cards */
-.moreCard {
-	background: #101e52;
-    height: 50px;
-    width: 100%;
-    max-width: 383px;
-    border-radius: 10px;
-    margin: 45px auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.moreCard a {
-	color: #eee;
-    border-radius: 10px;
-    width: 50px;
-    height: 100%;
-    background: #091226;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-.moreCard .numNav{
-    height: 100%;
-}
-.moreCard .numNav .active{
-    height: 100%;
-	background: var(--red);
-    box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%);
-}
-
 /*...... End Content .......*/
 
 
@@ -866,7 +915,7 @@ header{
 	  margin-right: 0;
 	}
   }
-/*...... End Comment .......*/
+/*...... End Footer .......*/
 
 
 
@@ -1155,41 +1204,39 @@ header{
     perspective: 800px;
     align-items: center;
     justify-content: center;
+	}
 }
-}
-.loaded {
+	.loaded {
 	display: none;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-.inner {
-position: absolute;
-box-sizing: border-box;
-width: 100%;
-height: 100%;
-border-radius: 50%;    
-}
-.inner.one {
-left: 0%;
-top: 0%;
-animation: rotate-one 1.2s linear infinite;
-border-bottom: 3px solid #fcfaff;
-
-}
-.inner.two {
-right: 0%;
-top: 0%;
-animation: rotate-two 1.2s linear infinite;
-border-right: 3px solid #fcfaff;
-
-}
-.inner.three {
-right: 0%;
-bottom: 0%;
-animation: rotate-three 1.2s linear infinite;
-border-top: 3px solid #fcfaff;
-}
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	}
+	.inner {
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;    
+	}
+	.inner.one {
+	left: 0%;
+	top: 0%;
+	animation: rotate-one 1.2s linear infinite;
+	border-bottom: 3px solid #fcfaff;
+	}
+	.inner.two {
+	right: 0%;
+	top: 0%;
+	animation: rotate-two 1.2s linear infinite;
+	border-right: 3px solid #fcfaff;
+	}
+	.inner.three {
+	right: 0%;
+	bottom: 0%;
+	animation: rotate-three 1.2s linear infinite;
+	border-top: 3px solid #fcfaff;
+	}
 @keyframes rotate-one {
 0% {
 	transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);

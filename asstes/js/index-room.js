@@ -1,10 +1,10 @@
+
 //=============================== Loding ===============================
 // Page loading animation
 $(window).on('load', function() {
 	$('#js-preloader').addClass('loaded');
 
 });
-
 //========================= Dark Mode & Light Mode =========================
 $(document).ready(function() {
 	$(".themeicons").click(function(){
@@ -24,11 +24,14 @@ $(document).ready(function() {
 $(document).ready(function(){	
 	$('.owl-carousel').owlCarousel({
 		loop:true,
-		dots:true,
-		nav:true,
+		dots:4,
+		nav:false,
 		autoplayTimeout:4000,
 		mousedrag:true,
-		smartSpeed:2400,
+		touchDrag: true,
+		smartSpeed: 600,
+		margin: 20,
+		autoHeight: true,		
 		responsive:{
 			60:{
 				items:1
@@ -49,6 +52,17 @@ $(document).ready(function(){
 				items:6
 			}
 		}
+	});
+	/*==============================
+	Navigation prev Next
+	==============================*/
+	$('.section__nav--prev').on('click', function() {
+		var carouselId = $(this).attr('data-nav');
+		$(carouselId).trigger('prev.owl.carousel');
+	});
+	$('.section__nav--next').on('click', function() {
+		var carouselId = $(this).attr('data-nav');
+		$(carouselId).trigger('next.owl.carousel');
 	});
 });
 // ===================== active btn Aside Menu =====================
@@ -72,6 +86,7 @@ $(document).ready(function() {
 });
 // ================= active btn Number  =================
 $(document).ready(function() {
+	// btn nav number
 	$(".moreCard .numNav a").click(function () {
 		if (!$(this).hasClass("active")) {
 			$(this).addClass("active")
@@ -79,6 +94,7 @@ $(document).ready(function() {
 				.removeClass("active");
 		}
 	});
+	// btn nav list watch download 
 	$(".li").click(function () {
 		if (!$(this).hasClass("active")) {
 			$(this).addClass("active")
@@ -86,6 +102,7 @@ $(document).ready(function() {
 				.removeClass("active");
 		}
 	});
+	// btn active episode
 	$(".episode .numNav a").click(function () {
 		if (!$(this).hasClass("active")) {
 			$(this).addClass("active")
@@ -93,6 +110,7 @@ $(document).ready(function() {
 				.removeClass("active");
 		}
 	});
+	// btn active season
 	$(".Season .numNav a").click(function () {
 		if (!$(this).hasClass("active")) {
 			$(this).addClass("active")
@@ -152,8 +170,8 @@ $(document).ready(function() {
 		$("#bubbleTrailer").fadeToggle();
 		});
 	// hide bop img 
-	$(".close-trailer").click(function(){
-		$("#bubbleTrailer").fadeToggle();
+	$(".close-trailer, #bubbleTrailer").click(function(){
+		$("#bubbleTrailer").fadeOut();
 		});	
 	// Stop trailer after click out 
 	const videos = document.querySelectorAll('iframe')
@@ -178,3 +196,4 @@ var scroll = $(window).scrollTop();
 		}
 });  
 // ============================================================================
+
