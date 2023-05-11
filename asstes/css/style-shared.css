@@ -352,11 +352,11 @@ aside a{color: var(--darkMode);}
 ==============================*/
 
 
-
 /*==============================
 	Footer
 ==============================*/
 .footer {
+	margin-top:30px;
 	background-color:  var(--blue);
 	border-top: 1px solid var(--underline);
 }
