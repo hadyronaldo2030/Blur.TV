@@ -3175,4 +3175,9 @@ $(document).ready(function(){
     cursorwidth: '0',
     scrollspeed:100,
   });
+  $(".containercads").niceScroll({
+    cursorcolor: '#5568DF',
+    cursorwidth: '10',
+    scrollspeed:100,
+  });
 });

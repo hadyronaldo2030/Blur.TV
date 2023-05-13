@@ -27,7 +27,7 @@
     <!-- Loading -->
     <div id="js-preloader" class="load">
         <div class="loader">
-            <a class="logo" href="#">Blur.<span>TV</span></a>
+            <a class="logo animate__animated animate__hinge" href="#">Blur.<span class="">TV</span></a>
             <div class="inner one"></div>
             <div class="inner two"></div>
             <div class="inner three"></div>
@@ -35,8 +35,23 @@
     </div>
     <!-- End -->
 
+    <!-- bubble Trailer -->
+    <section id="bubbleTrailer">
+        <div class="sectionTrailer">
+            <div class="stop fixed-top m-3">
+                <button class="close-trailer stop btn btn-light"><i class='fa-regular fa-arrow-left fa-xl'></i></button>
+            </div>
+            <iframe class="stop" style="width: 100%;height: 500px;" src="https://www.youtube.com/embed/mkomfZHG5q4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    <!-- card -->
+
     <!-- sidebar -->
-    <aside class="d-none ">
+    <aside>
         <!-- User -->
         <div class="head "> 
             <div class="w-100 pb-4 d-flex justify-content-between" style="border-bottom: 1px solid #eeeeee42; ">
@@ -50,10 +65,10 @@
                 <i  class="fa-solid fa-moon fa-lg themeicon "></i>
                 <i  class="fa-solid fa-lightbulb-on fa-lg themeicon d-none"></i>
             </button>
-            <a href="#" class="d-inline-block d-lg-none">
+            <a href="./profile.html" class="d-inline-block d-lg-none">
                 <i  class="fa-solid fa-bell-on fa-lg"></i>
             </a>
-            <a href="#" class="d-inline-block d-lg-none">
+            <a href="./profile.html" class="d-inline-block d-lg-none">
                 <i class="fa-solid fa-heart fa-lg"></i>
             </a>
         
@@ -175,7 +190,7 @@
     <!-- End  -->
 
     <!-- Start Header -->
-	<header id="header" class="body">
+	<header id="header" class="header">
         
 		<div id="drag-on">
 			<div onmouseover="stop(this)" onmouseout="play(this)" id="spin-on">
@@ -208,61 +223,70 @@
 		</div>
 		<div class="ground" id="ground"></div>
 	</header>
+	<div id="music-on"></div>
     <!-- end -->
 
     <!-- Display details img-->
-	<div class="display-img d-none row">
-		<!-- display trailer -->
-		<div id="box-tralier" style="width: 100%;min-height: 70%;" class=" m-auto mt-5 d-none">
-			<div class="stop Fast-Information-Head fixed-top">
-                
-				<i id="close-trailer" class='bx-md bx bxs-left-arrow-square text-warning'></i>
-			</div>
-			<iframe style="width: 100%;height: 500px;" src="https://www.youtube.com/embed/ngWBddVNVZs"
-				title="YouTube video player" frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen>
-			</iframe>
-		</div>
-		<!-- display trailer -->
-		<span class="details-img  m-auto col-lg col-md-12 col-sm-12">
-			<img src="" id="views">
-		</span>
-		<span class="details-text  col-lg-6 col-md-12 col-sm-12">
-			<div class="Fast-Information">
-				<div class="Top-Fast-Information">
-					<div class="Fast-Information-Head fixed-top">
-						<i id="close" class='bx-sm bx bx-window-close float-left'></i>
-						<span>تفاصيل سريعة </span>
-					</div>
-					<div class="Fast-Information-Content">
-						<ul class="list-unstyled">
-							<li><em>Bluray</em> <span>: الجودة </span></li>
-							<li><span>: سنة الانتاج </span><em>2014</em></li>
-							<li><span>: النوع </span><em>تاريخي</em></li>
-						</ul>
-					</div>
-					<div class="">
-						<h5 class="text-warning mt-5">" قصة الفيلم "</h5>
-						<p class="text-light">يتابع مجرمين خطرين على متن سفينة شحن يتم نقلهم من الفلبين إلى كوريا
-							الجنوبية ، حيث يطلقون العنان لقوة شريرة بعد محاولة الهروب التي أدت إلى أعمال شغب</p>
-					</div>
-				</div>
-			</div>
-		</span>
-		<div class="Bottom-Fast-Information col-12 ">
-			<a id="btn-tralier" class="HoverBefore" href="#">
-				<img src="https://icons.iconarchive.com/icons/radvisual/holographic/128/My-movies-icon.png"
-					style="margin: -10px 40px 0 0;" width="55" height="60">
-				مشاهدة التريلر
-			</a>
-			<a class="HoverBefore float-right" href="#">
-				<img src="img/header/tv.ico" style="margin: -10px 40px 0 0;" width="55" height="60">
-				مشاهدة الان
-			</a>
-		</div>
+	<div class="display-img d-none">
+		<div class="containercards">
+            <!-- display trailer -->
+            <div id="box-tralier" class=" m-auto mt-5 d-none">
+                <div class="stop d-flex justify-content-between">
+                    <i id="closeTrailer" class='fa-regular fa-arrow-left fa-xl'></i>
+                    <button class="closedisplay">
+                        <i class='fa-regular fa-xmark fa-xl text-light'></i>
+                    </button>
+                </div>
+                <iframe style="width: 100%;height: 500px;" src="https://www.youtube.com/embed/ngWBddVNVZs"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="stop Information-Head toggle-hidden">
+                <span>Fast Details</span>
+                <button class="closedisplay">
+                    <i class='fa-regular fa-xmark fa-xl text-light'></i>
+                </button>
+            </div>            
+            <!-- display trailer -->
+            <span class="details-img toggle-hidden">
+                <img src="" id="views">
+                <div class="icontools">
+                    <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                    <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                    <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                </div>
+            </span>
+
+            <ul class="list-unstyled toggle-hidden">
+                <li><span>Quality :</span> 4.K HD</li>
+                <li><span> Publication year :</span> 2023</li>
+                <li><span>Category :</span> Crime | action</li>
+            </ul>
+
+            <div class="storyimg toggle-hidden">
+                <h5 class="text-warning">"Show Story"</h5>
+                <p>selection and changing the OCR engine to "Tesseract" (under the "Language" menu). This message can be removed in the future by unchecking "OCR Disclaimer</p>
+            </div>
+            <div class="footer-Information toggle">
+                <a id="btn-tralier" class="watch mr-3 btn-outline-light" href="#">
+                    Watch Tralier
+                    <i class="fa-thin fa-play fa-xl ml-3"></i>
+                </a>
+                <a class="down ml-3 d-none btn-outline-danger" href="./Item-Details.html">
+                    Download 
+                    <i class="fa-thin fa-download fa-xl ml-3"></i>
+                </a>
+                <a class="ml-3 btn-outline-light" href="./Item-Details.html">
+                    Watch Now 
+                    <i class="fa-thin fa-video fa-xl ml-3"></i>
+                </a>
+            </div>
+
+        </div>
 	</div>
-	<div id="music-on"></div>
 	<!-- End Header -->
 
     <!-- Trends -->
@@ -292,17 +316,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -323,17 +352,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -341,7 +375,7 @@
                     <section class="itemsCard">
                         <div class="overlaycards"></div>
                         <div class="Img">
-                            <img src="./asstes/img/16.webp" alt="">
+                            <img src="./asstes/img/16.jpg" alt="">
                         </div>
                         <h6 class="titlefilm">Alice Through the Looking </h6>
                     </section>
@@ -354,17 +388,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -385,17 +424,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div> 
@@ -416,17 +460,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>  
@@ -447,17 +496,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div> 
@@ -478,17 +532,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -509,17 +568,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -540,17 +604,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -571,17 +640,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -602,17 +676,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -633,17 +712,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>                   
             </div>
@@ -705,17 +789,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
-                            <section class="boxTrailer ">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
+                            <section class="boxTrailer">
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -736,17 +825,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -767,17 +861,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -798,17 +897,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -829,17 +933,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -860,17 +969,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -897,17 +1011,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
-                            <section class="boxTrailer ">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
+                            <section class="boxTrailer">
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -928,17 +1047,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -959,17 +1083,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -990,17 +1119,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1021,17 +1155,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1052,17 +1191,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1089,17 +1233,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
-                            <section class="boxTrailer ">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
+                            <section class="boxTrailer">
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1120,17 +1269,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1151,17 +1305,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1182,17 +1341,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1213,17 +1377,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1244,17 +1413,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1312,17 +1486,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
-                            <section class="boxTrailer ">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
+                            <section class="boxTrailer">
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1343,17 +1522,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1374,17 +1558,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1405,17 +1594,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1436,17 +1630,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1467,17 +1666,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1504,17 +1708,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
-                            <section class="boxTrailer ">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <div class="iconCard">
+                                <span><i class="fa-light fa-clock-rotate-left fa-lg"></i></span>
+                                <span><i class="fa-light fa-heart fa-lg"></i></span>
+                                <span><i class="fa-light fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
+                            <section class="boxTrailer">
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1535,17 +1744,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1566,17 +1780,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1597,17 +1816,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1628,17 +1852,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1659,17 +1888,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1696,17 +1930,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
-                            <section class="boxTrailer ">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
+                            <section class="boxTrailer">
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1727,17 +1966,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1758,17 +2002,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1789,17 +2038,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1820,17 +2074,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1851,17 +2110,22 @@
                                 <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                                 <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                             </div>
-                            <div class="watchNow">
-                                <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                            </div>
+                            <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                             <section class="boxType">
                                 <p class="btntype">Action</p>
                                 <p class="btntype">Fantasy</p>
                             </section>
+                            <div class="iconCard">
+                                <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                                <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                                <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                            </div>
                             <section class="boxTrailer">
-                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                                 <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                                <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             </section>
                         </div>
                     </div>
@@ -1876,9 +2140,10 @@
         </div>   
     </main>
 	<!-- end -->
-
+        
     <!-- Trends -->
     <main class="carouselCards my-5">
+        
         <div class="container-custom">
             <!-- Title Section -->
             <div class="w-100 pb-2 mb-2 titleSections">
@@ -1904,17 +2169,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -1935,17 +2205,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -1966,17 +2241,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -1997,17 +2277,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div> 
@@ -2028,17 +2313,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>  
@@ -2059,17 +2349,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div> 
@@ -2090,17 +2385,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -2121,17 +2421,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -2152,17 +2457,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -2183,17 +2493,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -2214,17 +2529,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
@@ -2245,17 +2565,22 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="./Item-Details.html" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>                   
             </div>
@@ -2301,7 +2626,8 @@
 		</div>
 	</footer>
 	<!-- end -->
-
+    
+   
     <!-- Jquery -->
     <script src="asstes/js/jquery.slim.min.js"></script>
     <script src="asstes/js/jquery-3.5.1.min.js"></script>
@@ -2313,6 +2639,7 @@
     <script src="asstes/fonts/all.min.js"></script>
     <!-- OWl Carousel -->
     <script src="asstes/js/owl.carousel.min.js"></script>
+    
     
     <!-- Js Index Java Script -->
     <script src="asstes/js/header.js"></script>

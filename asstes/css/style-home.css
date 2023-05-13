@@ -7,10 +7,9 @@ Version:	1.0
 [Table of contents]
 
 1. Theme Dark & light
-2. Header Card Details
-3. Cast
-4. Content
-5. Comment
+2. Header carousel 3D
+3. Fast Details
+4. Cards
 6. Responsive
 
 ----------------------------------------*/
@@ -27,6 +26,7 @@ Theme Dark & light
 	--mov: #4b4b4f;
 	--blue2: #EEE;
 	--blue3: #0051ff;
+	--blue4: #dadada;
 	--aside: #ffffff;
 	--blue-head: #091226;
 	--blue-yellow-blue: #0f1a32;
@@ -49,6 +49,7 @@ html[data-theme="lightMode"]{
 	--mov: #111C5F;
 	--blue2: #091226;
 	--blue3: #091226;
+	--blue4: #09021e;
 	--aside: #0b1538d1;
 	--blue-gray-blue: #091226;
 	--gray: #35363a00;
@@ -60,10 +61,9 @@ html[data-theme="lightMode"]{
 }
 
 /*==============================
-	Header Card Details
+	Header carousel 3D
 ==============================*/
-/*...... Search .......*/
-.body {
+.header {
 	height: 555px;
 	touch-action: none; 
 	overflow: hidden;
@@ -75,47 +75,6 @@ html[data-theme="lightMode"]{
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
-input::placeholder{color: #000!important;}
-.blur-mode{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	backdrop-filter: blur(10px);
-    background-color: rgba(12,5,5,0.79);
-    background-image: linear-gradient(to right, rgba(0,0,0,0.40) 18%, rgba(0,3,16,0.70) 100%);	
-}
-.search-mobile{
-	position: relative;
-	background: #eeeeee;
-	right: auto;
-	margin: 10% auto;
-	width: 85%;
-	border-radius:20px;
-	-webkit-border-radius:20px;
-	-moz-border-radius:20px;
-	-ms-border-radius:20px;
-	-o-border-radius:20px;
-}
-.search-mobile input{
-	background: #eeeeee;
-    color: #EEE;
-    border: none;
-    height: 46px!important;
-    width: 100%;
-    margin: 0 48px 0 0;
-    z-index: 5;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
-.search-mobile button{
-	margin: -2px;
-	color: #000!important;
-	padding: 0;
-}
-
-audio{display: none}
 #drag-on, #spin-on {
 	height: 100vh;
   position: relative;
@@ -129,7 +88,6 @@ audio{display: none}
   -webkit-transform: rotateX(-10deg);
           transform: rotateX(-10deg);
 }
-
 #drag-on img, #drag-on video {
 	padding: 10px;
 	border-radius: 20px;
@@ -149,8 +107,6 @@ audio{display: none}
 	-webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
 	transition: .5s!important;
 }
-
-
 #drag-on img:hover, #drag-on video:hover {
 	/* transform: scale(1.2 , 1.2)!important; */
 	margin-top: -40px;
@@ -159,14 +115,13 @@ audio{display: none}
 	box-shadow: 0 0 15px #0e0631b3;
   -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
 }
-
 #drag-on p {
   font-family: Serif;
   position: absolute;
   top: 100%;
   left: 50%;
+  transform: translate(-50%,-50%) rotateX(90deg);
   -webkit-transform: translate(-50%,-50%) rotateX(90deg);
-          transform: translate(-50%,-50%) rotateX(90deg);
   color: #fff;
 }
 #ground {
@@ -175,17 +130,15 @@ audio{display: none}
   position: absolute;
   top: 100%;
   left: 50%;
+  transform: translate(-50%,-50%) rotateX(90deg);
   -webkit-transform: translate(-50%,-50%) rotateX(90deg);
-          transform: translate(-50%,-50%) rotateX(90deg);
   background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
 }
-
 #music-on {
   position: absolute;
   top: 0;
   left: 0;
 }
-
 @-webkit-keyframes spin {
   from{
     -webkit-transform: rotateY(0deg);
@@ -195,7 +148,6 @@ audio{display: none}
             transform: rotateY(360deg);
   }
 }
-
 @keyframes spin {
   from{
     -webkit-transform: rotateY(0deg);
@@ -226,188 +178,148 @@ audio{display: none}
             transform: rotateY(0deg);
   }
 }
+/*==============================
+	End Header carousel 3D
+==============================*/
 
-/* End Sections */
 
-/*........ Display img header & Fast-Information ........*/
+/*==============================
+	Fast Details
+==============================*/
 .display-img{
-	position:fixed;
-	top:0;
-	left:0;
-	overflow-y: auto;
-	width:100%;
-	height:100vh;
-	margin-left: 0;
-	padding: 0 150px;
-	backdrop-filter: blur(15px);
-    background: hsl(0deg 0% 0% / 56%);
-	z-index: 10000000;
-}
-.display-img .details-img,.details-text {
-	display: grid;
-	width: auto;
-    max-width: 300px !important;
-    max-height: 442px !important;
-    border-radius: 9px;
-    margin-top: 40px!important;
-    overflow: hidden;
-    padding: 10px;
-	align-items:right;
-}
-.display-img .details-img{margin-left: 17px!important;}
-.display-img span img{
-	width: 100%;
-	margin-top: 20px;
-	border-radius: 11px;
-}
-.details-text{
-	max-width:60% !important;
-	margin-right: 17px;
-	float:right
-}
-
-.Fast-Information {
-	/* background: #333; */
-	text-align: end;
-    width: 100%;
-    height: 100%;
-}
-.Fast-Information-Head {
-    color: #EEE;
-    display: inline-block;
-    width: 100%;
-    border-bottom: 1px solid #ffffff17;
-    padding: 17px 28px;
-    transition: .4s .4s all ease;
-}
-.Fast-Information-Content ul li {
-    display: inline-block;
-    width: 100%;
-    border-bottom: 1px solid#ffffff14;
-    padding: 8px 0;
-	float: right;
-	margin: 0 auto 5px ;
-    transition: .4s all ease;
-    font-size: 15px;
-	color: #000;
-}
-.Fast-Information-Content ul li span {
-    padding: 4px 10px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #68696b;
-	background: #68696b;
-	color: #eeeeee;
-    font-weight: bold;
-    
-}
-.Fast-Information-Content ul li em {
-    float: left;
-    font-style: normal;
-    padding: 4px 10px;	
-	border-radius: 15px;
-    font-size: 15px;
-    font-weight: bold;
-	background: #ffee1e;
-    box-shadow: 0 0 10px #ffee1e;
-	color: #000;
-}
-.Fast-Information .Top-Fast-Information {
-    height: 60px;
-	color: #000;
-    display: block;
-    width: 100%;
-}
-.Bottom-Fast-Information {
-	padding: 15px;
-    margin: 19px auto 0;
-	width: 700px;
-}
-.Bottom-Fast-Information a {
-	display: inline-block;
-    width: 270px;
-    border-radius: 55px;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
-    font-weight: bold;
-	background: #00000024;
-    color: #eee;
-    border: 1px solid #ffffff21;
-    margin: 10px;
-    align-content: space-evenly;
-}
-.bg-color{
-	background: linear-gradient(90deg,#08010278 0,#001fff3b);
-}
-
-/*........ Display img header & Fast-Information  in Mobile ........*/
-@media only screen and (max-width: 1170px) and (min-width: 200px) {	
-
-	.display-img{
-		overflow-y: auto;
-		padding: 0!important;
-
-	}
-}
-@media only screen and (max-width: 750px) and (min-width: 200px) {	
-	.display-img .details-img{
-		margin: auto!important;
-		margin-top: 45px!important;
-		width: 80%!important;
-	}
-.details-text{
-	min-width: 97% !important;
-    min-height: 50%;
-	margin-right: auto;
-	float:right
-}
-
-.Bottom-Fast-Information {
-    margin: auto;
-    width: 300px;
-}
-.Bottom-Fast-Information a{
-	margin: 10px auto;
-	display: inline-block;
-	width: 100%;
-}
-
-}
-/*........ End Header ........*/
-/*==============================
-	End Header
-==============================*/
-
-
-/*==============================
-	Start carousel Cards
-==============================*/
-/* section View Trailer*/
-#bubbleTrailer {
-	display: none;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    background: var(--opacity);
-    color: var(--lightMode);
     position: fixed;
     top: 0;
-    right: 0;
-    padding-top: 5%;
-    z-index: 100000;
-}
-.sectionTrailer{
-	position: absolute;
-    top: 0;
+    left: 0;
     width: 100%;
-    max-height: 80vh;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    background: hsl(0deg 0% 0% / 64%);
+    z-index: 10000000;
+    justify-content: center;
+    align-items: center;
 }
-iframe{
-	border-radius:15px 15px 0  0 ;
+.containercards {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #eeeeee38;
+    border-radius: 10px;
+    background: #09021e;
+    backdrop-filter: blur(15px);
+    height: 100%;
+    width: 550px;
+    min-width: 300px;
+    padding: 10px;
+    overflow-y: scroll;
 }
-/* end */
+/* head Card */
+.Information-Head {
+    display: flex;
+	justify-content: space-between;
+    color: #EEE;
+    border-bottom: 1px solid #ffffff17;
+    width: 100%;
+	padding: 10px 0;
+	transition:all .4s ease;
+}
+/* details Card */
+.details-img{
+	min-width: 200px;
+    max-width: 246px;
+    max-height: 350px;
+    border-radius: 10px;
+    margin: 15px 0 50px 0!important;
+}
+.details-img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.details-img .icontools{
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+	margin-top: 10px;
+    color: #EEE;
+	position: relative;
+	z-index: 1;
+}
+.display-img ul{
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 150px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: column;
+}
+.display-img ul li {
+	display: flex;
+    width: 100%;
+    padding: 8px 0;
+    transition: .4s all ease;
+    color: #EEE;
+    justify-content: space-between;
+    align-items: center;
+}
+.display-img ul li span {
+	padding: 4px 10px;	
+    font-size: 17px;
+	box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
+	background: #0d2456 !important;
+    color: #EEE;
+	border-radius: 10px;
+}
+.display-img .storyimg {
+    width: 100%;
+    border: 1px solid #ffffff21;
+	margin: 20px 0;
+	padding: 10px 5px;
+	border-radius: 10px;
+}
+.display-img .storyimg p{
+    color: #EEE;
+}
+/* footer Card */
+.footer-Information {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+.footer-Information a {
+    width: 270px;
+    height: 60px;
+    border-radius: 10px;
+    line-height: 60px;
+    font-weight: bold;
+	background: none;
+    color: #EEE;
+    border: 1px solid #ffffff21;
+    align-content: space-evenly;
+	transition: all 0.3s ease;
+}
+/* close card */
+#box-tralier{
+	width: 100%;
+	height: 100%;
+}
+#closeTrailer{
+	padding: 6px;
+	border-radius: 10px;
+	background:#091226;
+    color: #EEE;
+}
+/*==============================
+	End Fast Details
+==============================*/
 
-/* Cards carousel */
+/*==============================
+	Cards
+==============================*/
+
 main h3 {
 	color: var(--darkMode);
 	z-index: index 3;
@@ -419,6 +331,8 @@ main h3 {
     justify-content: space-between;
     flex-wrap: wrap;
 	margin-top: 80px;
+	position: sticky;
+	z-index:3;
 }
 .titleSections a{
     color: var(--darkMode);
@@ -487,13 +401,13 @@ main h3 {
 	transition: all .3s ease-in-out;
 	margin-left: 0;
 }
-.carouselCards .boxImgs:hover .titlefilm{
+.titlefilm{
 	position: absolute;
     top: 300px;
     width: 100%;
 }
-.titlefilm{
-	color: #EEE !important;
+.carouselCards .boxImgs:hover .titlefilm{
+	opacity: 0;
 }
 .carouselCards .boxImgs:hover .overlaycards {
 	backdrop-filter: blur(5px);
@@ -503,20 +417,39 @@ main h3 {
 }
 .carouselCards .overlaycards{
 	z-index: 1;
-    height: 330px !important;
+    height: 333px !important;
     width: 210px !important;
 	background: rgb(0,0,0);
 	border-radius: 10px;
 	position: absolute;
 	top: 0;
-	background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6980042016806722) 68%, rgba(9,18,32,1) 95%)!important;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(0 0 0 / 77%) 50%, rgba(9,18,32,1) 80%)!important;
+}
+.iconCard{
+	position: absolute;
+    bottom: -17px;
+    right: 0px;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.iconCard svg{
+	color: #EEE;
+	cursor:pointer;
+	transition: all .5s;
+}
+.iconCard svg:hover{
+	color: #11bcae;
+	cursor:pointer;
 }
 /* detailsCards */
 .carouselCards .boxImgs .detailsCards{
 	position: absolute;
     top: 0;
+	left: 4px;
 	width: 200px;
-    height: 100%;
+    height: 98%;
     padding: 21px;
     text-align: center;
     color: var(--yellow);
@@ -533,9 +466,11 @@ main h3 {
 .carouselCards .detailsCards .watchNow{
 	font-size: 20px;
 	margin-top: 20px;
-}
-.carouselCards .watchNow a{
 	color: #EEE;
+	transition: all 0.5s ease;
+}
+.carouselCards .detailsCards .watchNow:hover ,.boxTrailer:hover{
+	color: #909090;
 }
 .carouselCards .detailsCards .boxType{
 	display: flex;
@@ -557,7 +492,7 @@ main h3 {
 .carouselCards .detailsCards .boxTrailer {
     display: flex;
     width: 100%;
-    margin-top: 8px;
+    margin-top: 30px;
     justify-content: space-between;
 }
 .carouselCards .detailsCards .boxTrailer .btntype{
@@ -703,11 +638,6 @@ main h3 {
 		display: inline-block;
 	}
 }
-
-@media (max-width: 1080px) {
-	/* Header */
-	
-}
 @media (max-width: 990px) {
 	.d-none-990{
 		display: none !important;
@@ -776,10 +706,11 @@ main h3 {
 		transition: all .5s ease;
 	}
 	/* detailsCards */
-	.boxImgs .detailsCards{
+	.sectionCards .boxImgs .detailsCards{
 		position: absolute;
 		top: 0px;
 		left: -4px;
+		height: 100%;
 		padding: 20px;
 		text-align: center;
 		color: var(--yellow);
@@ -788,6 +719,12 @@ main h3 {
 		flex-direction: column;
 		display: none;
 		opacity: 0;
+	}
+	.sectionCards .detailsCards .boxTrailer {
+		margin-top: 18px;
+	}
+	.sectionCards .watchNow span {
+		font-size: 0px;
 	}
 	.sectionCards .boxImgs .overlaycards {
 		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
@@ -813,7 +750,6 @@ main h3 {
 		margin-left: auto;
 	}
 }
-
 @media (max-width: 590px) {
 	.d-none-590{
 		display: none!important;
@@ -841,5 +777,7 @@ main h3 {
 		padding: 0px!important;
 	}
 }
-  /* ==================================== */
-  
+
+/*==============================
+	End Responsive
+==============================*/  

@@ -55,10 +55,11 @@ function rangeSlide(value) {
 $(document).ready(function() {
 	// Open & Close menu slider
 	$("#openSlider").click(function() {
-		$("aside").removeClass("d-none");
-	});
-    $("#closeSlider").click(function() {
-		$("aside").addClass("d-none");
+		$("aside").css("width", "400px");
+		});
+	
+		$("#closeSlider").click(function() {
+		$("aside").css("width", "0");
 	});
 	// dropdown menu
     $("#btn-series").click(function() {
@@ -69,7 +70,9 @@ $(document).ready(function() {
 		$("#btn-movies").toggleClass("active");
 		$(".dropMovie").fadeToggle(1);
 	});
+	
 });	
+
 
 // ================= active btn Number More Cards =================
 $(document).ready(function() {
@@ -129,11 +132,11 @@ $(document).ready(function() {
 //============================= Bubble Trailer =============================
 	// show bop img 
 	$(".btnTrailer").click(function(){
-		$("#bubbleTrailer").fadeToggle();
+		$("#bubbleTrailer").toggleClass("d-none d-flex");
 		});
 	// hide bop img 
-	$(".close-trailer, #bubbleTrailer").click(function(){
-		$("#bubbleTrailer").fadeOut();
+	$(".close-trailer").click(function(){
+		$("#bubbleTrailer").toggleClass("d-none d-flex");
 		});	
 	// Stop trailer after click out 
 	const videos = document.querySelectorAll('iframe')
@@ -145,7 +148,13 @@ $(document).ready(function() {
 		  i.src = source
 	   })
 	})		
-
+//============================= active heart =============================
+$(document).ready(function() {
+	$(".fa-heart, .fa-clock-rotate-left").click(function(){
+		$(this).toggleClass("text-danger");
+		});
+	});
+	
 //=============================== Scroll Top ===============================
 $(window).scroll(function(){
 var scroll = $(window).scrollTop();

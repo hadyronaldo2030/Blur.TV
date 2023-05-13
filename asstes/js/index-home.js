@@ -2,7 +2,6 @@
 // Page loading animation
 $(window).on('load', function() {
 	$('#js-preloader').addClass('loaded');
-
 });
 //============================== NavBar ==============================
 let theEnd = 0;
@@ -90,6 +89,7 @@ $(document).ready(function(){
 		var carouselId = $(this).attr('data-nav');
 		$(carouselId).trigger('next.owl.carousel');
 	});
+
 	$('.section__nav--prev2').on('click', function() {
 		var carouselId = $(this).attr('data-nav');
 		$(carouselId).trigger('prev.owl.carousel');
@@ -103,10 +103,11 @@ $(document).ready(function(){
 $(document).ready(function() {
 	// Open & Close menu slider
 	$("#openSlider").click(function() {
-		$("aside").removeClass("d-none");
-	});
-    $("#closeSlider").click(function() {
-		$("aside").addClass("d-none");
+		$("aside").css("width", "400px");
+		});
+	
+		$("#closeSlider").click(function() {
+		$("aside").css("width", "0");
 	});
 	// dropdown menu
     $("#btn-series").click(function() {
@@ -117,6 +118,7 @@ $(document).ready(function() {
 		$("#btn-movies").toggleClass("active");
 		$(".dropMovie").fadeToggle(1);
 	});
+	
 });	
 
 // ================= active btn Number More Cards =================
@@ -177,11 +179,11 @@ $(document).ready(function() {
 //============================= Bubble Trailer =============================
 	// show bop img 
 	$(".btnTrailer").click(function(){
-		$("#bubbleTrailer").fadeToggle();
+		$("#bubbleTrailer").toggleClass("d-none d-flex");
 		});
 	// hide bop img 
-	$(".close-trailer, #bubbleTrailer").click(function(){
-		$("#bubbleTrailer").fadeOut();
+	$(".close-trailer").click(function(){
+		$("#bubbleTrailer").toggleClass("d-none d-flex");
 		});	
 	// Stop trailer after click out 
 	const videos = document.querySelectorAll('iframe')
@@ -192,8 +194,14 @@ $(document).ready(function() {
 		  i.src = ''
 		  i.src = source
 	   })
-	})		
-
+	});	
+//============================= active heart =============================
+$(document).ready(function() {
+	$(".fa-heart, .fa-clock-rotate-left").click(function(){
+		$(this).toggleClass("text-danger");
+		});
+	});
+	
 
 //=========================== Header Carousel 3D  ===========================
 
@@ -271,8 +279,6 @@ function play() {
 
 //============================ fast Details card  ============================
 
-
-
 	// show bop img 
 	$(".view").click(function(){
 		$(this).toggleClass("animate__animated animate__zoomOutUp");
@@ -280,33 +286,32 @@ function play() {
 		$(".view").delay(1000).queue(function(){
 			$(".display-img").toggleClass("d-none animate__animated animate__zoomInUp");
 			$(this).dequeue();
-	});
-
-
-		// hide bop img 
-		$(".display-img #close").click(function(){
-			$(".display-img").addClass("d-none");
-			});	
+			});
 	});	
 		
+	// hide bop img 
+	$(".closedisplay").click(function(){
+		$(".view").removeClass("animate__animated animate__zoomInUp");
+		$(".display-img").toggleClass("d-none");		
+	});	
 		
 	// Bop img header	
 	$(document).ready(function(){	
 		$("#header img").click(function(){
 		$(".display-img #views").attr('src' ,$(this).attr('src')) ;
 		});
-		// Bop open tralier
 		$("#btn-tralier").click(function(){
-		$("#box-tralier").removeClass("d-none");
-		$(".Fast-Information-Head").removeClass("d-none");
-		$(".details-img").addClass("d-none");
-		$(".details-text").addClass("d-none");
+			$("#box-tralier").removeClass("d-none");
+			$(".toggle-hidden").addClass("d-none");
+			$(".down").removeClass("d-none");
+			$(".watch").addClass("d-none");
 		});
-		$("#close-trailer").click(function(){
+		// Bop open tralier
+		$("#box-tralier").click(function(){
 		$("#box-tralier").addClass("d-none");
-		$(".details-img").removeClass("d-none");
-		$(".details-text").removeClass("d-none");
-		$(".details-text").removeClass("d-none");
+		$(".toggle-hidden").removeClass("d-none");
+		$(".down").addClass("d-none");
+		$(".watch").removeClass("d-none");
 		});
 		
 		

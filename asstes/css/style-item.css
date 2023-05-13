@@ -31,7 +31,7 @@ Theme Dark & light
 	--blue-head: #091226;
 	--blue-yellow-blue: #0f1a32;
 	--blue-gray-blue: #3C4B57;
-	--underline: #00000042;
+	--underline: #00000089;
 	--opacity: rgba(233, 233, 233, 0.544);
 	--opacity1:#eeeeee;
 	--opacity2:#ffd4d645;
@@ -150,35 +150,12 @@ to {
 	z-index: 5;
 }
 .trailer-views a{color: #eeeeee!important;}
-/* section View Trailer*/
-#bubbleTrailer {
-	display: none;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    background: var(--opacity);
-    color: var(--lightMode);
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding-top: 5%;
-    z-index: 100000;
-}
-.sectionTrailer{
-	position: absolute;
-    top: 0;
-    width: 100%;
-    max-height: 80vh;
-}
-iframe{
-	border-radius:15px 15px 0  0 ;
-}
+
 
 /* details */
 .upDerails{
 	display: flex;
     flex-direction: column;
-    /* min-height: 472px; */
     justify-content: space-between;
 	z-index: 1;
 }
@@ -201,38 +178,34 @@ header .details, .down-watch{
     width: 266px;
     margin-bottom: 10px;
     align-items: center;
-    background: var(--blue-head);
     border-radius: 8px;
 }
 .btn-shadow{
-	background: var(--blue-yellow-blue);
-    color: var(--lightMode);
-    font-weight: bold;
-    width: auto;
-    border-radius: 9px;
+	min-width: 106px;
     padding: 7px;
-    /* box-shadow: inset 4px 3px 5px rgb(25 26 4 / 89%), 1px 3px 22px rgb(220 226 45 / 40%);    box-shadow: inset 4px 3px 5px rgb(25 26 4 / 89%), 1px 3px 9px rgb(220 226 45 / 40%); */
+    font-size: 17px;
+    box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
+    background: #0d2456 !important;
+    color: #EEE;
+    border-radius: 10px;
 }
 /* download watch */
-.down-watch .watch{
-	background: var(--red);
-    color: #091226;
-    font-weight: bold;
-    width: auto;
-    border-radius: 9px;
+.down-watch .watch ,.down{
+	width: 200px;
+    text-align: center;
+    display: inline-block;
     font-size: 18px;
-    padding: 20px;
-    border-radius: 52px;
-    box-shadow: inset 3px 3px 14px #2d0c0c,
-	 4px 1px 35px rgb(247 113 113 / 48%);
-}
-.down-watch .down{
-	padding: 20px;
+    padding: 12px;
     font-size: 18px;
     background: none;
-    color: var(--darkMode);
-    border-radius: 52px;
-	border: 1px solid var(--darkMode);
+    color: var(--darkMode)!important;
+    border-radius: 10px;
+    border: 0.5px solid var(--underline);
+	transition: all 0.3s ease
+}
+.down-watch .watch:hover ,.down:hover{
+    color: #bdbdbd!important;
+    background:#091226ae;
 }
 /*==============================
 	End Header
@@ -269,105 +242,149 @@ header .details, .down-watch{
     flex-direction: column;
     align-items: center;
 }
-.owl-next ,.owl-prev{
-	font-size: 70px!important;
-    font-weight: 100!important;
-	height: 0px !important;
-}
-.owl-theme .owl-nav {
-	margin: -270px -27px 0px 0px;
-    width: 115px !important;
-    display: flex!important;
-    opacity: 0.4;
-    float: right;
-    justify-content: space-between;
+ .owl-theme .owl-nav.disabled +
+ .owl-dots {
+    display: none!important;
 }
 /*==============================
 	End Cast
 ==============================*/
 
 
+
 /*==============================
-	Start Content
+	Cards
 ==============================*/
-.content h3 {
+
+main h3 {
 	color: var(--darkMode);
+	z-index: index 3;
 }
-/* .my-10{margin:40px auto !important} */
-.content{
-	display: contents;
-    width: 100%;
-    height: 300px;
+.titleSections{
+	display: inline-flex;
+    border-bottom: 1px solid var(--underline);
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	margin-top: 80px;
+	position: sticky;
+	z-index:3;
+}
+.titleSections a{
     color: var(--darkMode);
 }
-.content .boxImgs{
+.my-10{margin:40px auto}
+.carouselCards{
+	position:relative;
+    width: 100%;
+    padding: 15px 0px 1px;
+    color: var(--darkMode);
+}
+.carouselCards .boxImgs{
 	position: relative;
     border-radius: 10px;
     padding: 0;
     margin: 30px auto;
-    min-width: 210px;
+    min-width: 186px;
     height: 310px;
-	transition: all .3s ease-in-out;
-	z-index: 1;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+	
 }
-.content .boxImgs:hover{
-	z-index: 6;
+.carouselCards .boxImgs:hover{
+	z-index: 0; 
 }
-.content .boxImgs .itemsCard{
+.carouselCards .boxImgs .itemsCard{
 	position: absolute;
 	border-radius: 10px;
-    width: 210px;
+	width: 210px;
     height: 330px;
 	backdrop-filter: blur(5px);
     background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
 	transition: all .3s ease-in-out;
     padding:0px;
+	z-index: 0;
+	
 }
-.content .boxImgs:hover .itemsCard{
-    width: 450px;
+.carouselCards .boxImgs:hover .itemsCard{
+	width: auto;
     height: 330px;
+	z-index: 1;
 }
-.content .boxImgs .itemsCard .Img{
+.carouselCards .boxImgs .itemsCard .Img{
 	transition: all .3s ease-in;
 	border-radius: 10px;
 	width: 210px;
-    height: 310px;
+    height: 330px;
 }
-.content .boxImgs:hover .Img{
+.carouselCards .boxImgs:hover .Img{
 	transform: scale(0.9);
 }
-.content .itemsCard img{
+.carouselCards .itemsCard img{
 	border-radius: 10px;
 	width: 100%;
 	height: 100%;
 }
-.content .boxImgs .titlefilm{
+.carouselCards .boxImgs .titlefilm{
 	position: absolute;
-    top: 294px;
+    top: 290px;
     width: 100%;
-	z-index: 3;
+	z-index: 3; /* test */
 	margin-left: 10px;
+	text-align: center;
+	font-weight: bold;
+	transition: all .3s ease-in-out;
+	margin-left: 0;
 }
 .titlefilm{
-	color: #EEE !important;
+	position: absolute;
+    top: 300px;
+    width: 100%;
 }
-.overlaycards{
+.carouselCards .boxImgs:hover .titlefilm{
+	opacity: 0;
+}
+.carouselCards .boxImgs:hover .overlaycards {
+	backdrop-filter: blur(5px);
+	background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 26%, rgba(17, 27, 95, 0.764) 71%);
+	width: 210px;
+	height: 300px;
+}
+.carouselCards .overlaycards{
 	z-index: 1;
-	height: 100%;
-	width: 100%;
+    height: 333px !important;
+    width: 210px !important;
 	background: rgb(0,0,0);
 	border-radius: 10px;
 	position: absolute;
 	top: 0;
-	background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6980042016806722) 68%, rgba(9,18,32,1) 95%)!important;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(0 0 0 / 77%) 50%, rgba(9,18,32,1) 80%)!important;
+}
+.iconCard{
+	position: absolute;
+    bottom: -17px;
+    right: 0px;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.iconCard svg{
+	color: #EEE;
+	cursor:pointer;
+	transition: all .5s;
+}
+.iconCard svg:hover{
+	color: #11bcae;
+	cursor:pointer;
 }
 /* detailsCards */
-.boxImgs .detailsCards{
+.carouselCards .boxImgs .detailsCards{
 	position: absolute;
-    top: 15px;
-    left: 210px;
-	width: 198px;
-    height: 100%;
+    top: 0;
+	left: 4px;
+	width: 200px;
+    height: 98%;
     padding: 21px;
     text-align: center;
     color: var(--yellow);
@@ -377,23 +394,25 @@ header .details, .down-watch{
 	display: none;
 	opacity: 0;
 }
-.boxImgs:hover .detailsCards{
+.carouselCards .boxImgs:hover .detailsCards{
     display: flex;
 	opacity: 1;
 }
-.detailsCards .watchNow{
+.carouselCards .detailsCards .watchNow{
 	font-size: 20px;
 	margin-top: 20px;
-}
-.watchNow a{
 	color: #EEE;
+	transition: all 0.5s ease;
 }
-.detailsCards .boxType{
+.carouselCards .detailsCards .watchNow:hover ,.boxTrailer:hover{
+	color: #909090;
+}
+.carouselCards .detailsCards .boxType{
 	display: flex;
     width: 100%;
     margin-top: 25px;
 }
-.detailsCards .boxType  .btntype{
+.carouselCards .detailsCards .boxType  .btntype{
 	background: var(--yellow);
 	color: #091226;
     font-weight: bold;
@@ -405,73 +424,62 @@ header .details, .down-watch{
     margin: auto;
     box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%), 1px 3px 9px rgb(220 226 45 / 40%);
 }
-.detailsCards .boxTrailer{
-	display: flex;
+.carouselCards .detailsCards .boxTrailer {
+    display: flex;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 30px;
     justify-content: space-between;
 }
-
-.detailsCards .boxTrailer .btntype{
+.carouselCards .detailsCards .boxTrailer .btntype{
 	color: #EEE!important;
     font-weight: bold;
     width: auto;
     font-size: 14px;
 }
-/* last details card */
-.lastDetailsCards{
+/* arrow Carousel Left & Right */
+.arrow_Carousel{
 	position: absolute;
-    top: 4px;
-    right: 240px;
-    width: 198px;
-    height: 100%;
-    padding: 21px;
-    text-align: center;
-    color: var(--yellow);
-    z-index: 2;
-    justify-content: space-between;
-    flex-direction: column;
-    display: none;
-	opacity: 0;
-}
-.boxImgs:hover .lastDetailsCards{
+    top: 12%;
     display: flex;
-	opacity: 1;
-}
-.lastDetailsCards .watchNow{
-	font-size: 20px;
-	margin-top: 20px;
-}
-.lastDetailsCards .boxType{
-	display: flex;
-    width: 100%;
-    margin-top: 25px;
-}
-.lastDetailsCards .boxType  .btntype{
-	background: var(--yellow);
-    color: var(--mov);
-    font-weight: bold;
-    max-width: 130px;
-    width: 70px;
-    border-radius: 50px;
-    padding: 5px;
-    font-size: 13px;
-    margin: auto;
-    box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%), 1px 3px 9px rgb(220 226 45 / 40%);
-}
-.lastDetailsCards .boxTrailer{
-	display: flex;
-    width: 100%;
-    margin-top: 25px;
     justify-content: space-between;
+    width: 100%;
 }
-.lastDetailsCards .boxTrailer  .btntype{
-    font-weight: bold;
-    width: auto;
-    font-size: 14px;
-	color: #EEE !important;
+.arrow_Carousel button{
+	background: rgb(0,0,0);
+	width: 145px;
+	height: 495px;
+    padding: 0 20px;
+    z-index: 2;
 }
-/* btn more danger */
+.arrow_Carousel .section__nav--next, .arrow_Carousel .section__nav--next2{
+	background: linear-gradient(90deg, var(--btn-blur) 0%, var(--btn-blur2) 51%, rgba(0,0,0,0) 100%);
+}
+.arrow_Carousel .section__nav--prev, .arrow_Carousel .section__nav--prev2{
+	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--btn-blur2) 51%, var(--btn-blur) 100%);
+}
+.arrow_Carousel button svg{
+    padding: 10px;
+    font-size: 40px;
+    color: var(--darkMode);
+    border-radius: 50px;
+}
+.carouselCards .owl-dots {
+	margin-top:10px;
+	display: flex;
+    justify-content: center;
+}
+.carouselCards .owl-dots button{
+	background: rgb(166, 166, 166) !important;
+    min-width: 15px;
+    height: 15px;
+    border-radius: 50px;
+	margin: 10px;
+    border: 3px solid #EEE !important;
+}
+.carouselCards .owl-dots .active{
+	background: rgb(59 47 141) !important;
+}
+/* btn more */
 .moreCardDanger{
 	width: 100%!important;
 	height: 50px!important;
@@ -495,38 +503,8 @@ header .details, .down-watch{
     align-items: center;
 }
 
-/* Number More Cards */
-.moreCard {
-	background: #101e52;
-    height: 50px;
-    width: 100%;
-    max-width: 383px;
-    border-radius: 10px;
-    margin: 45px auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.moreCard a {
-	color: #eee;
-    border-radius: 10px;
-    width: 50px;
-    height: 100%;
-    background: #091226;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-.moreCard .numNav{
-    height: 100%;
-}
-.moreCard .numNav .active{
-    height: 100%;
-	background: var(--red);
-    box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%);
-}
 /*==============================
-	End Content
+	End Cards
 ==============================*/
 
 
@@ -745,77 +723,6 @@ details summary{
 		display: inline-block;
 	}
 	
-	.content .boxImgs{
-		padding: 0;
-		margin: 30px auto;
-		height: 270px;
-	}
-	
-	.content .boxImgs .itemsCard{
-		position: absolute;
-		border-radius: 10px;
-		width: 170px;
-		height: 270px;
-		backdrop-filter: blur(5px);
-		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
-		transition: all .3s ease-in-out;
-		padding:0px;
-		z-index: 0;
-	}
-	.content .boxImgs .itemsCard{
-		position: absolute;
-		border-radius: 10px;
-		width: 200px;
-		height: 300px;
-		backdrop-filter: blur(5px);
-		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
-		transition: all .3s ease-in-out;
-		padding:0px;
-		z-index: 0;
-	}
-	
-	.content .boxImgs:hover .itemsCard{
-		width: auto;
-    	height: 260px;
-		z-index: 1;
-	}
-	.content .boxImgs .itemsCard .Img{
-		transition: all .3s ease-in;
-		border-radius: 10px;
-		width: 200px;
-		height: 275px !important;
-	}
-	.content .boxImgs:hover .Img{
-		transform: scale(0.9);
-	}
-	.content .itemsCard img{
-		border-radius: 10px;
-		width: 100%;
-		height: 100%;
-	}
-	.content .boxImgs .titlefilm {
-		font-size: 13px;
-		top: 260px;
-		text-align: center;
-		font-weight: bold;
-		margin-left: 0;
-	}
-	.content .boxImgs:hover .titlefilm {
-		top: 280px;
-		transition: all .5s ease;
-	}
-	/* detailsCards */
-	.boxImgs .detailsCards{
-		top: 0;
-    	left: 0;
-		height: 245px!important;
-	}
-	.boxImgs:hover .overlaycards {
-		backdrop-filter: blur(5px);
-		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(12, 24, 72, 0.499) 38%, rgba(17, 27, 95, 0.764) 71%);
-		width: 200px;
-		height: 300px;
-	}
 }
 @media (max-width: 740px) {
 	.d-none-740{

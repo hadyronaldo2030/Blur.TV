@@ -25,7 +25,7 @@
     <!-- Loading -->
     <div id="js-preloader" class="load">
         <div class="loader">
-            <a class="logo" href="#">Blur.<span>TV</span></a>
+            <a class="logo animate__animated animate__hinge" href="#">Blur.<span class="">TV</span></a>
             <div class="inner one"></div>
             <div class="inner two"></div>
             <div class="inner three"></div>
@@ -34,7 +34,7 @@
     <!-- End -->
 
     <!-- sidebar -->
-    <aside class="d-none ">
+    <aside>
         <!-- User -->
         <div class="head "> 
             <div class="w-100 pb-4 d-flex justify-content-between" style="border-bottom: 1px solid #eeeeee42; ">
@@ -184,8 +184,8 @@
                 <!-- bubble Trailer -->
                 <section id="bubbleTrailer">
                     <div class="sectionTrailer">
-                        <div class="stop Fast-Information-Head fixed-top m-3">
-                            <button class="close-trailer stop btn btn-light"><i class='fa-solid fa-regular fa-xmark fa-lg'></i></button>
+                        <div class="stop fixed-top m-3">
+                            <button class="close-trailer stop btn btn-light"><i class='fa-regular fa-arrow-left fa-xl'></i></button>
                         </div>
                         <iframe class="stop" style="width: 100%;height: 500px;" src="https://www.youtube.com/embed/mkomfZHG5q4"
                             title="YouTube video player" frameborder="0"
@@ -212,7 +212,7 @@
                     </div>
                     <div class="story">
                         <h5>"Show Story"</h3>
-                        <p class="text-white">This text was recognized by the built-in Ocrad engine. A better transcription may be attained by right clicking on the selection and changing the OCR engine to "Tesseract" (under the "Language" menu). This message can be removed in the future by unchecking "OCR Disclaimer" (under the Options menu). More info: http://projectnaptha.com/ocrad</p>
+                        <p class="text-white">This text was recognized by the built-in Ocrad engine. A better transcription may be attained by right clicking on the selection and changing the OCR engine to "Tesseract" (under the "Language" menu). This message can be removed in the future by unchecking "OCR Disclaimer" (under the Options menu). More info</p>
                     </div>
                     <div class="details row">
                         <div class="col-6 pl-0">
@@ -247,14 +247,14 @@
                     </div>
                     <div class="down-watch row">
                         <span id="" class=" col mt-4 p-0">
-                            <a class="watch text-white" href="./show-Room.html">
-                                <i class="fa-light fa-play fa-xl"></i>
+                            <a class="watch" href="./show-Room.html">
+                                <i class="fa-light fa-play fa-xl pr-2"></i>
                                 Watch Now
                             </a>
                         </span>
                         <span class=" col mt-4">
                             <a class="down" href="/asstes/img/انترو تيتو موفيز أفلام 2022 أكشن • رعب • اثارة • خيال • سوبرهيروز ᴴᴰ.mp4">
-                                <i class="fa-light fa-download fa-xl"></i>
+                                <i class="fa-light fa-download fa-xl pr-2"></i>
                                 Download Now
                             </a>
                         </span>
@@ -319,19 +319,21 @@
     </main>
     <!-- End  -->
     
-    <!-- content -->
-    <main class="content my-5">
+    <!-- Trends -->
+    <main class="carouselCards my-5">
         <div class="container-custom">
-            <div class="w-100 pb-2 mb-4 titleSections">
-                <h3 style="letter-spacing: 10px;">Similar Offers</h3>
+            <!-- Title Section -->
+            <div class="w-100 pb-2 mb-2 titleSections">
+                <h3 style="letter-spacing: 10px;">
+                    Similar Offers <i class="fa-sharp fa-regular fa-arrow-trend-up fa-lg"></i>
+                </h3>
             </div>
-            
-            <div class="productRow">
-                <div class="boxImgs my-10 d-none-1460">
+            <div id="similar" class="section__carousel owl-carousel row">
+                <div class="col-2 boxImgs">
                     <section class="itemsCard">
                         <div class="overlaycards"></div>
                         <div class="Img">
-                            <img src="./asstes/img/1.jfif" alt="">
+                            <img src="./asstes/img/10.jpg" alt="">
                         </div>
                         <h6 class="titlefilm">Alice Through the Looking </h6>
                     </section>
@@ -344,21 +346,170 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="#" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
-                <div class="boxImgs my-10 d-none-1190 d-inline-block-590">
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/11.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/16.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/17.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                        </section>
+                    </div>
+                </div> 
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/12.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                        </section>
+                    </div>
+                </div>  
+                <div class="col-2 boxImgs">
                     <section class="itemsCard">
                         <div class="overlaycards"></div>
                         <div class="Img">
@@ -375,21 +526,98 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="#" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                        </section>
+                    </div>
+                </div> 
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/1.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
-                <div class="boxImgs my-10">
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/2.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
+                        </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-2 boxImgs">
                     <section class="itemsCard">
                         <div class="overlaycards"></div>
                         <div class="Img">
@@ -406,21 +634,26 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="#" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
-                <div class=" boxImgs my-10">
+                <div class="col-2 boxImgs">
                     <section class="itemsCard">
                         <div class="overlaycards"></div>
                         <div class="Img">
@@ -437,25 +670,30 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="#" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
-                <div class=" boxImgs my-10">
+                <div class="col-2 boxImgs">
                     <section class="itemsCard">
                         <div class="overlaycards"></div>
                         <div class="Img">
-                            <img src="./asstes/img/8.jpg" alt="">
+                            <img src="./asstes/img/5.jpg" alt="">
                         </div>
                         <h6 class="titlefilm">Alice Through the Looking </h6>
                     </section>
@@ -468,62 +706,74 @@
                             <i style="font-size: 18px;" class="fa-solid fa-star"></i>
                             <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
                         </div>
-                        <div class="watchNow">
+                        <a href="./Item-Details.html" class="watchNow">
                             <i class="fa-thin fa-circle-play fa-2xl"></i>
-                            <a href="#" class="mt-2 d-block">WATCH NOW</a>
-                        </div>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
                         <section class="boxType">
                             <p class="btntype">Action</p>
                             <p class="btntype">Fantasy</p>
                         </section>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
                         <section class="boxTrailer">
-                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                             <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
                         </section>
                     </div>
                 </div>
-                <div class="boxImgs my-10 d-none-990">
-                    <div dir="rtl">
-                        <section class="itemsCard">
-                            <div class="overlaycards"></div>
-                            <div class="Img">
-                                <img src="./asstes/img/6.jpg" alt="">
-                                <h6 class="titlefilm">Alice Through the Looking </h6>
-                            </div>
-                            <div class="lastDetailsCards">
-                                <div>
-                                    <h4 class="text-white">5.<small>9</small></h4>
-                                    <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                                    <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                                    <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                                    <i style="font-size: 18px;" class="fa-solid fa-star"></i>
-                                    <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
-                                </div>
-                                <div class="watchNow">
-                                    <i class="fa-thin fa-circle-play fa-2xl"></i>
-                                    <a href="#" class="mt-2 d-block">WATCH NOW</a>
-                                </div>
-                                <section class="boxType">
-                                    <p class="btntype">Action</p>
-                                    <p class="btntype">Fantasy</p>
-                                </section>
-                                <section class="boxTrailer">
-                                    <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
-                                    <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
-                                </section>
-                            </div>
+                <div class="col-2 boxImgs">
+                    <section class="itemsCard">
+                        <div class="overlaycards"></div>
+                        <div class="Img">
+                            <img src="./asstes/img/6.jpg" alt="">
+                        </div>
+                        <h6 class="titlefilm">Alice Through the Looking </h6>
+                    </section>
+                    <div class="detailsCards">
+                        <div>
+                            <h4 class="text-white">5.<small>9</small></h4>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star"></i>
+                            <i style="font-size: 18px;" class="fa-solid fa-star-sharp-half"></i>
+                        </div>
+                        <a href="./Item-Details.html" class="watchNow">
+                            <i class="fa-thin fa-circle-play fa-2xl"></i>
+                            <span class="mt-2 d-block">WATCH NOW</span>
+                        </a>
+                        <section class="boxType">
+                            <p class="btntype">Action</p>
+                            <p class="btntype">Fantasy</p>
                         </section>
-                    </div>   
-                </div>
-            </div>
-            
-            <!-- Number More Cards -->
-            <div class="moreCardDanger">
-                <span class="numNav">
-                    <a class="active" href="./Seaction.html"><span>More</span> <i class="fa-light fa-chevron-down fa-xs ml-2"></i></a>
-                </span>
+                        <div class="iconCard">
+                            <span><i class="fa-solid fa-clock-rotate-left fa-lg"></i></span>
+                            <span><span class="fa-solid fa-heart fa-lg "></span></span>
+                            <span><i class="fa-solid fa-light fa-share-nodes fa-lg"></i></span>
+                        </div>
+                        <section class="boxTrailer">
+                            <a href="#" class="btntype btnTrailer"><i class="fa-duotone fa-play"></i> <span>TRAILER</span></a>
+                            <a href="#" class="btntype"><i class="fa-regular fa-eye fa-sm"></i> <span>82.K</span></a>
+                        </section>
+                    </div>                   
             </div>
         </div>
+            
+        </div>
+        <div class="arrow_Carousel">
+            <button class="section__nav--next" data-nav="#similar" type="button"><i class="fa-sharp fa-regular fa-arrow-left fa-xl"></i></button>
+            <button class="section__nav--prev" data-nav="#similar" type="button"><i class="fa-sharp fa-regular fa-arrow-right fa-xl"></i></button>
+        </div>
+        <!-- Number More Cards -->
+        <div class="moreCardDanger">
+            <span class="numNav">
+                <a class="active" href="./Seaction.html"><span>More</span> <i class="fa-light fa-chevron-down fa-xs ml-2"></i></a>
+            </span>
+        </div>        
     </main>
     <!-- End  -->
   

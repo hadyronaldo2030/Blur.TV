@@ -49,45 +49,66 @@ $(document).ready(function() {
 $(document).ready(function(){	
 	$('.owl-carousel').owlCarousel({
 		loop:true,
-		dots:false,
-		nav:true,
+		dots:4,
+		nav:false,
+		autoPlay:true,
 		autoplayTimeout:4000,
 		mousedrag:true,
-		smartSpeed:2400,
+		touchDrag: true,
+		smartSpeed: 600,
+		margin: 20,
+		autoHeight: true,		
 		responsive:{
 			60:{
 				items:1
 			},
-			300:{
+			520:{
 				items:2
 			},
-			400:{
+			740:{
 				items:3
 			},
-			640:{
+			940:{
 				items:4
 			},
-			770:{
+			1200:{
 				items:5
 			},
-			910:{
+			1460:{
 				items:6
-			},
-			970:{
-				items:7
 			}
 		}
 	});
-});
+	/*==============================
+	Navigation prev Next
+	==============================*/
+	$('.section__nav--prev').on('click', function() {
+		var carouselId = $(this).attr('data-nav');
+		$(carouselId).trigger('prev.owl.carousel');
+	});
+	$('.section__nav--next').on('click', function() {
+		var carouselId = $(this).attr('data-nav');
+		$(carouselId).trigger('next.owl.carousel');
+	});
 
+	$('.section__nav--prev2').on('click', function() {
+		var carouselId = $(this).attr('data-nav');
+		$(carouselId).trigger('prev.owl.carousel');
+	});
+	$('.section__nav--next2').on('click', function() {
+		var carouselId = $(this).attr('data-nav');
+		$(carouselId).trigger('next.owl.carousel');
+	});
+});
 // ===================== active btn Aside Menu =====================
 $(document).ready(function() {
 	// Open & Close menu slider
 	$("#openSlider").click(function() {
-		$("aside").removeClass("d-none");
-	});
-    $("#closeSlider").click(function() {
-		$("aside").addClass("d-none");
+		$("aside").css("width", "400px");
+		});
+	
+		$("#closeSlider").click(function() {
+		$("aside").css("width", "0");
 	});
 	// dropdown menu
     $("#btn-series").click(function() {
@@ -98,6 +119,7 @@ $(document).ready(function() {
 		$("#btn-movies").toggleClass("active");
 		$(".dropMovie").fadeToggle(1);
 	});
+	
 });	
 
 // ================= active btn Number More Cards =================
@@ -158,11 +180,11 @@ $(document).ready(function() {
 //============================= Bubble Trailer =============================
 	// show bop img 
 	$(".btnTrailer").click(function(){
-		$("#bubbleTrailer").fadeToggle();
+		$("#bubbleTrailer").toggleClass("d-none d-flex");
 		});
 	// hide bop img 
-	$(".close-trailer, #bubbleTrailer").click(function(){
-		$("#bubbleTrailer").fadeOut();
+	$(".close-trailer").click(function(){
+		$("#bubbleTrailer").toggleClass("d-none d-flex");
 		});	
 	// Stop trailer after click out 
 	const videos = document.querySelectorAll('iframe')
@@ -174,7 +196,13 @@ $(document).ready(function() {
 		  i.src = source
 	   })
 	})		
-
+//============================= active heart =============================
+$(document).ready(function() {
+	$(".fa-heart, .fa-clock-rotate-left").click(function(){
+		$(this).toggleClass("text-danger");
+		});
+	});
+	
 //=============================== Scroll Top ===============================
 $(window).scroll(function(){
 var scroll = $(window).scrollTop();
