@@ -62,7 +62,7 @@ html[data-theme="lightMode"]{
 	Header Card Details
 ==============================*/
 header{
-	height: 580px;
+	height: 576px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -192,8 +192,10 @@ header .details, .down-watch{
 /* download watch */
 .down-watch .watch ,.down{
 	width: 200px;
+	min-height:60px;
     text-align: center;
-    display: inline-block;
+    display: flex;
+	align-items: center;
     font-size: 18px;
     padding: 12px;
     font-size: 18px;
@@ -242,9 +244,8 @@ header .details, .down-watch{
     flex-direction: column;
     align-items: center;
 }
- .owl-theme .owl-nav.disabled +
- .owl-dots {
-    display: none!important;
+.mainCast .owl-carousel.owl-drag .owl-item {
+    margin: auto 10px !important;
 }
 /*==============================
 	End Cast
@@ -266,7 +267,7 @@ main h3 {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-	margin-top: 80px;
+	margin-top: 30px;
 	position: sticky;
 	z-index:3;
 }
@@ -793,10 +794,6 @@ details summary{
 		width: 100%;
 		min-width: auto!important;
 	}
-	/* Header */
-	.down-watch{
-		display: inline-block;
-	}
 	/* Titele page */
 	h3{
 		font-size: 22px !important;
@@ -814,6 +811,16 @@ details summary{
 	}
 	.owl-next , .owl-prev {
 		font-size: 45px !important;
+	}
+	/* download watch */
+	.down-watch .watch ,.down{
+		min-width:160px!important;
+		padding: 15px 10px;
+		margin-top: 10px;
+		font-size: 16px!important;
+		color: var(--darkMode);
+		border-radius: 10px;
+		box-shadow: none;
 	}
 }
   
