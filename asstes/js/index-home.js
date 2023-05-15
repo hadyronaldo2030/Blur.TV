@@ -1,3 +1,75 @@
+//=========================== Header Carousel 3D  ===========================
+
+var radius = 850;
+var autoRotate = true;
+var rotateSpeed = 100;
+var imgWidth = 200; 
+var imgHeight = 400;
+
+
+// var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';
+var bgMusicControls = true;
+
+
+setTimeout(init, 100);
+
+var header = document.getElementById('header');
+var ospin = document.getElementById('spin-on');
+var aImg = ospin.getElementsByTagName('img');
+var aVid = ospin.getElementsByTagName('video');
+var aEle = [...aImg, ...aVid];
+
+
+ospin.style.width = imgWidth + "px";
+ospin.style.height = imgHeight + "px";
+
+
+var ground = document.getElementById('ground');
+ground.style.width = radius * 3 + "px";
+ground.style.height = radius * 3 + "px";
+
+function init(delayTime) {
+  for (var i = 0; i < aEle.length; i++) {
+    aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
+    aEle[i].style.transition = "transform 1s";
+    aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+  }
+}
+
+function applyTranform(obj) {
+
+  if(tY > 180) tY = 180;
+  if(tY < 0) tY = 0;
+
+  obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+}
+
+function playSpin(yes) {
+  ospin.style.animationPlayState = (yes?'running':'paused');
+}
+
+var sX, sY, nX, nY, desX = 0,
+    desY = 0,
+    tX = 0,
+    tY = 10;
+
+
+
+if (autoRotate) {
+  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
+}
+
+function stop() {
+  if (autoRotate) {
+    ospin.style.animationPlayState = 'paused';
+  }
+}
+function play() {
+  if (autoRotate) {
+    ospin.style.animationPlayState = 'running';
+  }
+} 
 // ====================== OWl Carousel  ======================
 $(document).ready(function(){	
 	$('.owl-carousel').owlCarousel({
@@ -54,81 +126,92 @@ $(document).ready(function(){
 	});
 });
 //=========================== Header Carousel 3D  ===========================
-
-$(document).ready(function() {
-	var radius = 850;
-	var autoRotate = true;
-	var rotateSpeed = 100;
-	var imgWidth = 200;
-	var imgHeight = 400;
+$(function() {
+	// Set constant variable values
+	const radius = 850;
+	const autoRotate = true;
+	const rotateSpeed = 100;
+	const imgWidth = 200; 
+	const imgHeight = 400;
   
-	// var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';
-	var bgMusicControls = true;
+	// Get necessary elements from DOM
+	const ospin = $('#spin-on')[0];
+	const aEle = $('img, video', ospin);
   
+	// Set dimensions for elements
+	ospin.style.width = imgWidth + 'px';
+	ospin.style.height = imgHeight + 'px';
+	$('#ground').css({
+	  width: radius * 3 + 'px',
+	  height: radius * 3 + 'px'
+	});
+  
+	// Function to initialize elements in a circular pattern
+	function init(delayTime) {
+	  aEle.each((i, ele) => {
+		ele.style.transform = `rotateY(${i * (360 / aEle.length)}deg) translateZ(${radius}px)`;
+		ele.style.transition = 'transform 1s';
+		ele.style.transitionDelay = `${delayTime || (aEle.length - i) / 4}s`;
+	  });
+	}
+  
+	// Function to apply transform to selected element
+	function applyTransform(obj) {
+	  let ty = Math.min(Math.max(-180, tY), 0);
+	  obj.style.transform = `rotateX(${ty}deg) rotateY(${tX}deg)`;
+	}
+  
+	// Function to play/pause rotation of elements
+	function playSpin(yes) {
+	  ospin.style.animationPlayState = yes ? 'running' : 'paused';
+	}
+  
+	// Update transform values on mouse movement
+	let sX, sY, nX, nY, desX = 0, desY = 0, tX = 0, tY = 10;
+	$(document).on({
+	  mousedown: e => {
+		clearInterval(spinTimer);
+		sX = e.clientX;
+		sY = e.clientY;
+	  },
+	  mousemove: e => {
+		if (sX && sY) {
+		  nX = e.clientX;
+		  nY = e.clientY;
+		  const dx = (nX - sX) * 0.1;
+		  const dy = (nY - sY) * 0.1;
+		  tX += dx;
+		  tY += dy;
+		  applyTransform(ospin);
+		  sX = nX;
+		  sY = nY;
+		}
+	  },
+	  mouseup: () => {
+		spinTimer = setInterval(() => {
+		  tX += 0.1;
+		  applyTransform(ospin);
+		}, 16);
+		sX = sY = 0;
+	  }
+	});
+  
+	// Update transform periodically
+	let spinTimer = setInterval(() => {
+	  tX += 0.1;
+	  applyTransform(ospin);
+	}, 16);
+  
+	// Play/pause rotation on mouse enter/leave
+	$(document).on({
+	  mouseenter: () => playSpin(false),
+	  mouseleave: () => playSpin(true)
+	});
+  
+	// Call init function after a short delay from page load
 	setTimeout(init, 100);
   
-	var header = $('#header');
-	var ospin = $('#spin-on');
-	var aImg = ospin.find('img');
-	var aVid = ospin.find('video');
-	var aEle = $.merge(aImg, aVid);
-  
-	ospin.css({
-	  'width': imgWidth + "px",
-	  'height': imgHeight + "px"
-	});
-  
-	var ground = $('#ground');
-	ground.css({
-	  'width': radius * 3 + "px",
-	  'height': radius * 3 + "px"
-	});
-  
-	function init(delayTime) {
-	  $.each(aEle, function(i) {
-		$(this).css({
-		  'transform': "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)",
-		  'transition': "transform 1s",
-		  'transition-delay': delayTime || (aEle.length - i) / 4 + "s"
-		});
-	  });
-	}
-  
-	function applyTranform(obj) {
-	  if (tY > 180) tY = 180;
-	  if (tY < 0) tY = 0;
-	  obj.css({
-		'transform': "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)"
-	  });
-	}
-  
-	function playSpin(yes) {
-	  ospin.css('animation-play-state', (yes ? 'running' : 'paused'));
-	}
-  
-	var sX, sY, nX, nY, desX = 0,
-	  desY = 0,
-	  tX = 0,
-	  tY = 10;
-  
-	if (autoRotate) {
-	  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
-	  ospin.css('animation', `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`);
-	}
-  
-	function stop() {
-	  if (autoRotate) {
-		ospin.css('animation-play-state', 'paused');
-	  }
-	}
-  
-	function play() {
-	  if (autoRotate) {
-		ospin.css('animation-play-state', 'running');
-	  }
-	}
   });
-
 //============================ fast Details card  ============================
 
 	// show bop img 
