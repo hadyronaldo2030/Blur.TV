@@ -392,18 +392,15 @@ aside a{color: var(--darkMode);}
 
 }
 .sectionTrailer{
-    border: 1px solid #eeeeee38;
+	border-top: 2px solid #eeeeee2b;
     border-radius: 10px;
-    background: #09021ed3;
-    backdrop-filter: blur(15px);
-    height: 100%;
-    width: 550px;
+    height: auto;
+    width: 70%;
     min-width: 300px;
-    padding: 10px;
+    padding: 10px 10px 40px;
 }
 iframe{
 	width: 100%;
-	max-height: 300px;
 	border-radius:15px 15px 0  0 ;
 }
 /*==============================
