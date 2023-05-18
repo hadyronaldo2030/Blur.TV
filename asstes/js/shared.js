@@ -79,6 +79,20 @@ $(document).ready(function() {
 	});
 });
 
+//=========================== btn Search  ===========================
+$(document).ready(function() {
+	
+	// Open Search		
+	$("#open").click(function(){
+		$("#sectionSearch").fadeToggle();
+		$("#sectionSearch input").focus();
+		});
+	// close Search		
+	$(".close").click(function(){
+		$("#sectionSearch").fadeToggle();
+		});
+
+});
 // =========================== Icon Top  ===========================
 
 // Get the button
@@ -101,20 +115,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-//=========================== btn Search  ===========================
-$(document).ready(function() {
-	
-	// Open Search		
-	$("#open").click(function(){
-		$("#sectionSearch").fadeToggle();
-		$("#sectionSearch input").focus();
-		});
-	// close Search		
-	$(".close").click(function(){
-		$("#sectionSearch").fadeToggle();
-		});
-
-});
 
 //============================= Bubble Trailer =============================
 	// show bop img 

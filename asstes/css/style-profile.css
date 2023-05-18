@@ -132,6 +132,16 @@ Primary use:	HotFlix Template
   color: rgba(255,255,255,0.7);
   font-size: 14px;
 }
+.btn-Camera{
+  background: #212027b8;
+    border-radius: 10px;
+    width: 45px;
+    height: 35px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 .profile__avatar {
   display: block;
     position: relative;
@@ -159,7 +169,7 @@ Primary use:	HotFlix Template
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-bottom: -100px!important;
+      margin-bottom: -130px!important;
       flex-wrap: wrap;
     }
     .profile__meta{
@@ -228,6 +238,13 @@ Primary use:	HotFlix Template
 	transition: 1s;
     color: #eee!important;
 }
+@media (max-width: 400px) {
+	.profile__content ul li{
+		font-size: 13px;
+		padding: 0px!important;
+	}
+}
+
 /* Active btn */
 .profile__content  ul .active{
 	text-shadow: 1px 1px 12px #f4ff92;

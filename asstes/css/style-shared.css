@@ -361,11 +361,10 @@ aside .listItem:hover{
 }
 aside .active{
     border-left: 4px solid #009aff !important;
-    background: rgb(13 0 255 / 26%)!important;
 }
 /* dropdown Aside */
 aside .dropMovie, .dropSeries{
-	padding: 10px 20px 10px 70px !important;
+	padding: 20px 0px 10px 50px !important;
 	font-size: 17px!important;
 	transition: all .5s ease;
 	display: none;
@@ -415,7 +414,6 @@ iframe{
 .footer {
 	margin-top:30px;
 	background-color:  var(--blue);
-	border-top: 1px solid var(--underline);
 }
 .footer__content {
 display: flex;
