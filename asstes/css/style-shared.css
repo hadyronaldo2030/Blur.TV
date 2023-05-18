@@ -38,6 +38,21 @@ ul{
 	margin: 0 !important;
 	list-style: none!important;
 }
+/* Custom Scroll */
+::-webkit-scrollbar {
+	width: 5px;
+	z-index:2000000
+  }
+::-webkit-scrollbar-track {
+	background: #f1f1f15c;
+	z-index:2000000
+}
+::-webkit-scrollbar-thumb {
+	background: #130e43d8;
+	border-radius: 50px;
+	min-height:350px;
+	z-index:2000000
+}
 /*==============================
 Theme Dark & light
 ==============================*/
@@ -104,21 +119,7 @@ html,body{
 	transition: all .5s ease;
 	font-weight: normal;	
 }
-/* Custom Scroll */
-::-webkit-scrollbar {
-	width: 5px;
-	z-index:2000000
-  }
-::-webkit-scrollbar-track {
-	background: #f1f1f15c;
-	z-index:2000000
-}
-::-webkit-scrollbar-thumb {
-	background: #130e43d8;
-	border-radius: 50px;
-	min-height:350px;
-	z-index:2000000
-}
+
 
 /*==============================
 Navbar

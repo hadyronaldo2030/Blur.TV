@@ -1,65 +1,5 @@
-/*----------------------------------------
-Project:	Blur.TV HTML Template
-
-Devloper:	Hady Rabie - Mohamed Salah
-----------------------------------------*/
-/*----------------------------------------
-[Table of contents]
-
-1. Theme Dark & light
-2. Header Card Details
-3. Cast
-4. Content
-5. Comment
-6. Responsive
-
-----------------------------------------*/
-
-/*==============================
-Theme Dark & light
-==============================*/
-:root{
-	--lightMode: #EEE;
-	--darkMode: rgba(9,18,32,1);
-	--yellow: orange;
-	--red: #0051ff;
-	--blue: #eeeeee;
-	--mov: #4b4b4f;
-	--blue2: #EEE;
-	--blue3: #0051ff;
-	--aside: #ffffff;
-	--blue-head: #091226;
-	--blue-yellow-blue: #0f1a32;
-	--blue-gray-blue: #3C4B57;
-	--underline: #00000089;
-	--opacity: rgba(233, 233, 233, 0.544);
-	--opacity1:#eeeeee;
-	--opacity2:#ffd4d645;
-	--opacity3:#f0edff00;
-}
-
-html[data-theme="lightMode"]{
-	--darkMode: #EEE;
-	--lightMode: rgba(9,18,32,1);
-	--yellow: #F7FF00;
-	--red: #FF0000;
-	--blue: #0B1538;
-	--blue-head: #09122600;
-	--blue-yellow-blue: #F7FF00;
-	--mov: #111C5F;
-	--blue2: #091226;
-	--blue3: #091226;
-	--aside: #0b1538d1;
-	--blue-gray-blue: #091226;
-	--gray: #35363a00;
-	--underline: #eeeeee42;
-	--opacity:rgba(9, 18, 32, 0.895);
-	--opacity1: rgba(9,18,32,1);
-	--opacity2: rgba(0,0,0,0.6980042016806722);
-	--opacity3: rgba(0,0,0,0);
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 
 * {
   margin: 0;
@@ -67,28 +7,25 @@ html[data-theme="lightMode"]{
   box-sizing: border-box;
 }
 a{
-  text-decoration: none; 
+  text-decoration: none;
+  color: #b9b3b3; 
 }
 body{
-    width: 100%;
-    height: 100%;
-    font-family: "Poppins", sans-serif;
-    background-image: url("/asset/image/EG-en-20230417-popsignuptwoweeks-perspective_alpha_website_small.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden !important;
-  }
-  .link-back{
-    color: #fff;
-    outline: none;
-  }
-  .link-back:hover{
-    color: #4481eb;
-  }
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/cover.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden !important;
+}
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
 /*...... logo .......*/
 .logo{
-	/* font-family: 'Strangferfixcs'; */
 	width: 150px;
 	font-family: sans-serif;
 	font-size: 30px;
@@ -110,29 +47,18 @@ body{
     backdrop-filter: blur(5px);
 		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0, 0, 0, 0.499) 38%, rgba(0, 0, 0, 0.764) 71%);
   }
-input {
-  font-family: "Poppins", sans-serif;
-}
-.img-page{
+
+
+/* ========================= 
+  LogIn Logout
+========================= */
+.container {
   position: relative;
   width: 100%;
-  height: 100%;
-  overflow-x: hidden !important;
-  filter: blur(5px) ;
-  
+  min-height: 100vh;
+  overflow: hidden;
 }
-.img-page img{
-  object-fit: cover;
-  object-position: center;
-  height: 50%;
-}
-.container{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 90%;
-  width: 100%;
-}
+
 .forms-container {
   position: absolute;
   width: 100%;
@@ -150,7 +76,7 @@ input {
   transition: 1s 0.7s ease-in-out;
   display: grid;
   grid-template-columns: 1fr;
-  z-index: 5;
+  z-index: 10;
 }
 
 form {
@@ -181,22 +107,25 @@ form.sign-in-form {
 }
 
 .input-field {
-  max-width: 380px;
-  width: 100%;
-  background-color: #ffffff;
-  margin: 10px 0;
-  height: 55px;
-  border-radius: 55px;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  padding: 0 0.4rem;
-  position: relative;
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f000;
+    border: 1px solid #ffffff59;
+    color: #ffffff!important;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 1.4rem;
+    position: relative;
+    align-items: center;
 }
 
-.input-field i {
+.input-field svg {
   text-align: center;
   line-height: 55px;
-  color: #d6cfcf;
+  color: #acacac;
   transition: 0.5s;
   font-size: 1.1rem;
 }
@@ -208,7 +137,7 @@ form.sign-in-form {
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #ffffff;
+  color: #333;
 }
 
 .input-field input::placeholder {
@@ -217,9 +146,9 @@ form.sign-in-form {
 }
 
 .social-text {
+  color: #eee;
   padding: 0.7rem 0;
   font-size: 1rem;
-  color: #fff;
 }
 
 .social-media {
@@ -234,9 +163,10 @@ form.sign-in-form {
   justify-content: center;
   align-items: center;
   margin: 0 0.45rem;
-  color: #ffffff;
+  color: #333;
   border-radius: 50%;
-  border: 1px solid #ffffff;
+  border: 1px solid #b9b3b3;
+  color: #b9b3b3;
   text-decoration: none;
   font-size: 1.1rem;
   transition: 0.3s;
@@ -247,9 +177,19 @@ form.sign-in-form {
   border-color: #4481eb;
 }
 
+/* submit */
+.row-form{
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  justify-content:  space-between;
+  color: #b9b3b3;
+  margin-bottom: 50px;
+}
 .btn {
-  width: 380px;
-  background-color: #050d33;
+  width: 150px;
+  box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
+	background: #091226;
   border: none;
   outline: none;
   height: 49px;
@@ -260,7 +200,6 @@ form.sign-in-form {
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
-  font-size: 20px;
 }
 
 .btn:hover {
@@ -304,86 +243,54 @@ form.sign-in-form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: space-around;
   text-align: center;
   z-index: 6;
-  height: 100%;
 }
 
 .left-panel {
   pointer-events: all;
   padding: 3rem 17% 2rem 12%;
+  align-items: flex-start;
 }
 
 .right-panel {
   pointer-events: none;
   padding: 3rem 12% 2rem 17%;
+  align-items: flex-end;
 }
 
 .panel .content {
   color: #fff;
-    position: relative;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.6s;
-    /* text-align: center; */
-    top: 0;
-    right: 43%;
+    height: 80%;
     display: flex;
-    height: 90%;
-    transform: translate(-20%, 0%);
-    -webkit-transition: transform 0.9s ease-in-out;
-    -moz-transition: transform 0.9s ease-in-out;
-    -ms-transition: transform 0.9s ease-in-out;
-    -o-transition: transform 0.9s ease-in-out;
     flex-direction: column;
     justify-content: space-around;
-    align-content: flex-start;
     align-items: flex-start;
 }
-
-.panel h5 {
-  font-weight: bold;
+.panel h3 {
+  font-weight: 600;
   line-height: 1;
-  font-size: 20px;
-  margin-bottom: 32px;
-  text-align: left;
+  font-size: 1.5rem;
 }
-
-
-.panel ul{
+.panel p {
+  font-size: 0.95rem;
+  padding: 0.7rem 0;
+}
+.content ul li{
   list-style: none;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  flex-direction: column;
-}
-ul li{
   margin-top: 10px;
-  display: flex;
-  align-items: center;
-  width: 100%;
 }
-ul li:before{
-  content: "•";
-  font-size: 30pt;
-  padding-right: 10px;
-  margin: 0;
-  line-height: 0;
-}
-
 .btn.transparent {
   margin: 0;
   background: none;
-  background: #050d33;
-  width: 380px;
-  height: 49px;
+  border: 2px solid #fff;
+  width: 130px;
+  height: 41px;
   font-weight: 600;
-  font-size: 20px;
-  margin-top: 10px;
-}
-.btn.transparent:hover{
-  background-color: #050d33;
-
+  font-size: 0.8rem;
 }
 
 .right-panel .image,
@@ -429,8 +336,23 @@ ul li:before{
 .container.sign-up-mode .right-panel {
   pointer-events: all;
 }
-
+@media (max-width: 950px) {
+  .row-950 {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+  .row-950 input{
+    width: 100%;
+  }
+}
 @media (max-width: 870px) {
+  .d-none-850{
+    display: none;
+  }
   .container {
     min-height: 800px;
     height: 100vh;
@@ -531,6 +453,7 @@ ul li:before{
     top: 5%;
     transform: translate(-50%, 0);
   }
+  
 }
 
 @media (max-width: 570px) {
@@ -559,11 +482,3 @@ ul li:before{
   }
 }
 
-.text-login span{
-  margin-left: 30px;
-  color: #fff;
-}
-.text-login > span{
-  position: relative;
-  left: -25px;
-}
