@@ -104,14 +104,14 @@ html[data-theme="lightMode"]{
   align-items: start;
 }
 .profile__meta h3 {
-  color: #fff;
+  color: #fff ;
   display: block;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 2px;
 }
 .profile__meta span {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.7) ;
   font-size: 14px;
 }
 .btn-Camera{
@@ -160,6 +160,12 @@ html[data-theme="lightMode"]{
       justify-content: flex-start;
       align-items: center;
       margin-top: 10px;
+    }
+    .profile__meta h3 {
+      color: #999;
+    }
+    .profile__meta span {
+      color: #999;
     }
 }
 /* End Header  */
