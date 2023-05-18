@@ -71,24 +71,6 @@ html[data-theme="lightMode"]{
 	--btn-blur:rgba(9,18,32,1);
 	--btn-blur2:rgba(9,18,32,1);
 }
-/*----------------------------------------
-[Master Stylesheet]
-
-Project:	HotFlix
-Version:	2.1
-Primary use:	HotFlix Template
-----------------------------------------*/
-/*----------------------------------------
-[Table of contents]
-
-10. Profile
-12. Dashbox
-13. Price
-14. Main
-20. Form
-1. Header
-
-----------------------------------------*/
 
 /*==============================
 	Header
@@ -156,7 +138,7 @@ Primary use:	HotFlix Template
 }
 .profile__avatar img {
     width: 130px;
-    height: 130px;
+    min-height: 130px;
     border-radius: 70px;
     border: 3px solid #6d6d6d;
 }
