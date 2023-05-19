@@ -182,15 +182,15 @@
         <div class="container-custom">
 			<div class="profile__user">
 				<div class="profile__avatar">
+					<label for="form__img-upload" class="btn-Camera">
+						<i class="fa-solid fa-camera-retro fa-xl"></i>
+					</label>
+					<input id="form__img-upload" name="form__img-upload" type="file" accept=".png, .jpg, .jpeg" style="display: none;">
 					<img id="form__img"  src="asstes/img/user.svg" alt="">
 				</div>
 				<div class="profile__meta">
 					<h3>John Doe</h3>
 					<span>Blur.TV ID: 78123</span>
-					<label for="form__img-upload" class="btn-Camera">
-						<i class="fa-solid fa-camera-retro"></i>
-					</label>
-					<input id="form__img-upload" name="form__img-upload" type="file" accept=".png, .jpg, .jpeg" style="display: none;">
 				</div>
 			</div>
 		</div>
@@ -599,7 +599,11 @@
 		</div>
 	</div>
 	<!-- end content -->
-
+	<div class="container-custom">
+		<div class="col-12 p-0 my-3">
+			<button class="form__btn" type="button">Logout</button>
+		</div>
+	</div>
 	<!-- footer -->
 	<footer class="footer">
 		<div class="container-custom">
