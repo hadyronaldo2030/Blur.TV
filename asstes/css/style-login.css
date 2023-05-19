@@ -31,7 +31,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden !important;
+  overflow-x: hidden !important;
 }
 body,
 input {
@@ -484,12 +484,12 @@ form.sign-in-form {
   }
 
   .container:before {
-    bottom: 72%;
+    bottom: 80%;
     left: 50%;
   }
 
   .container.sign-up-mode:before {
-    bottom: 28%;
+    bottom: 20%;
     left: 50%;
   }
 }
