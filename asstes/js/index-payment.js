@@ -1,3 +1,19 @@
+//=========================== btn Search  ===========================
+$(document).ready(function() {
+	
+	// Open Search		
+	$("#open").click(function(){
+		$("#sectionSearch").fadeToggle();
+		$("#sectionSearch input").focus();
+		});
+	// close Search		
+	$(".close").click(function(){
+		$("#sectionSearch").fadeToggle();
+		});
+
+});
+//===========================   ===========================
+
 new Vue({
   el: "#app",
   data() {

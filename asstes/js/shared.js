@@ -83,15 +83,13 @@ $(document).ready(function() {
 $(document).ready(function() {
 	
 	// Open Search		
-	$("#open").click(function(){
-		$("#sectionSearch").fadeToggle();
-		$("#sectionSearch input").focus();
+	$(".card-button").click(function(){
+		$(".wrapper").fadeIn();
 		});
 	// close Search		
-	$(".close").click(function(){
-		$("#sectionSearch").fadeToggle();
+	$(".card-form__button, .Cancel").click(function(){
+		$(".wrapper").fadeOut();
 		});
-
 });
 // =========================== Icon Top  ===========================
 
