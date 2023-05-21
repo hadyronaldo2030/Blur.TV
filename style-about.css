@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --primary-color: #007AF3;
+}
+
+body {
+  background: #F2F2F2;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+a {
+  color: #444444;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+/* Start Header  */
+.poseterHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(20deg,rgba(3, 3, 3, 0.911),
+              rgba(0, 0, 0, 0.445)),
+                url("./123.jpg") no-repeat center center /cover;
+}
+.poseterHeader h1::after{
+    content: ' ';
+    width: 100%;
+    border-bottom: 6px solid #ffffff;
+    padding: 0;
+    margin: 0;
+    display: block;
+    padding-bottom: 1rem;
+}
+
+.poseterHeader ul{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    font-size: 0.5rem !important;
+    
+}
+
+.poseterHeader li,.poseterHeader  li a{
+    margin: 5px;
+    color: #fff;
+
+}
+.poseterHeader  li a:hover{
+    color: rgb(201, 61, 42);
+    transform: scalex(80deg);
+    -webkit-transform: scalex(80deg);
+    -moz-transform: scalex(80deg);
+    -ms-transform: scalex(80deg);
+    -o-transform: scalex(80deg);
+}
+/* End Header  */
+
+/* <!-- Start Service --> */
+.hero {
+  text-align: center;
+}
+
+.left-col .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 0.3em;
+}
+.left-col h1 {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: 0.2em;
+}
+.left-col .primary-cta {
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.6em 1.3em;
+  font-size: 1.4em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+}
+.left-col .watch-video-cta {
+  display: block;
+  margin-top: 1em;
+}
+.left-col .watch-video-cta img {
+  margin-right: 0.5em;
+}
+
+.hero-img {
+  width: 70%;
+  margin-top: 3em;
+}
+
+/* <!-- Start Detials --> */
+section.features-section {
+  background: #20272E;
+  color: white;
+}
+
+ul.features-list {
+  margin: 0;
+  padding-left: 0.1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+ul.features-list li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+ul.features-list li:before {
+  content: "";
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("./Flat_tick_icon.svg");
+  background-size: contain;
+  margin-right: 0.5em;
+}
+
+.features-section img {
+  display: none;
+}
+
+.testimonials-section {
+  background: var(--primary-color);
+  color: white;
+}
+.testimonials-section li {
+  background: #006BD6;
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 5em auto;
+  border-radius: 1em;
+}
+.testimonials-section li img {
+  width: 5em;
+  height: 5em;
+  border: 5px solid #006BD6;
+  border-radius: 50%;
+  margin-top: -4.5em;
+}
+
+/* Start Media */
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 10em 4em;
+  }
+
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .hero .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+  .hero .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+
+  .hero-img {
+    width: 30%;
+    margin-right: 8em;
+  }
+
+  .hero-cta {
+    display: flex;
+  }
+
+  .primary-cta {
+    margin-right: 1em;
+  }
+
+  ul.features-list {
+    display: block;
+    margin-left: 5em;
+  }
+  ul.features-list li {
+    font-size: 1.4em;
+  }
+  ul.features-list li:before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .features-section {
+    position: relative;
+  }
+
+  .features-section img {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 350px;
+    bottom: -2em;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+  }
+
+  .testimonials-section ul {
+    display: flex;
+  }
+  .testimonials-section ul li {
+    margin: 0 1em;
+  }
+
+  .contact-section {
+    position: relative;
+  }
+  .contact-section .container {
+    display: flex;
+  }
+
+  .contact-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+  }
+  .contact-right iframe {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .features-section:before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 20em;
+    background: var(--primary-color);
+    left: 0;
+    top: -4em;
+  }
+  .features-section:after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 20em;
+    background: url("./Flat_tick_icon.svg") no-repeat;
+    left: 4.5em;
+    top: 2em;
+  }
+}
