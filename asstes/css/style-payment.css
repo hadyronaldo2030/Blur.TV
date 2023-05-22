@@ -10,11 +10,10 @@ Devloper:	Hady Rabie - Mohamed Salah
 
 1. Theme Dark & light
 2. Header
-2. Profile
-4. Stats
-5. dashbox
-6. Footer
-7. Loading
+2. payment
+4. card detail
+4. Card Wrapper
+5. Responsive
 
 /*==============================
 Theme Dark & light
@@ -96,7 +95,7 @@ html[data-theme="lightMode"]{
 }
 /* End Header  */
 /*==============================
-	price
+	payment
 ==============================*/
 .payment{
   width: 100%;
@@ -176,6 +175,10 @@ margin-bottom: 2em;
 .card-price > span  {
 font-size: 1rem;
 }
+
+/*==============================
+        card detail
+==============================*/
 .card-detail{
   width: 100%;
 }
@@ -216,7 +219,7 @@ transition: all 50ms ease-in ;
 }
 
 /*==============================
-price
+Card Wrapper
 ==============================*/
 
 .wrapper {
@@ -231,23 +234,14 @@ price
   z-index: 1000;
   display: none;
 }
-@media screen and (max-width: 700px), (max-height: 500px) {
-  .wrapper {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-}
+
 
 .card-form {
   max-width: 570px;
   margin: auto;
   width: 100%;
 }
-@media screen and (max-width: 576px) {
-  .card-form {
-    margin: 0 auto;
-  }
-}
+
 .card-form__inner {
   background: var(--blue);
   /* box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4); */
@@ -255,27 +249,13 @@ price
   padding: 35px;
   padding-top: 180px;
 }
-@media screen and (max-width: 480px) {
-  .card-form__inner {
-    padding: 25px;
-    padding-top: 165px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-form__inner {
-    padding: 15px;
-    padding-top: 165px;
-  }
-}
+
+
 .card-form__row {
   display: flex;
   align-items: flex-start;
 }
-@media screen and (max-width: 480px) {
-  .card-form__row {
-    flex-wrap: wrap;
-  }
-}
+
 .card-form__col {
   flex: auto;
   margin-right: 35px;
@@ -283,25 +263,15 @@ price
 .card-form__col:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 480px) {
-  .card-form__col {
-    margin-right: 0;
-    flex: unset;
-    width: 100%;
-    margin-bottom: 20px;
-  }
+
   .card-form__col:last-child {
     margin-bottom: 0;
   }
-}
+
 .card-form__col.-cvv {
   max-width: 150px;
 }
-@media screen and (max-width: 480px) {
-  .card-form__col.-cvv {
-    max-width: initial;
-  }
-}
+
 .card-form__group {
   display: flex;
   align-items: flex-start;
@@ -329,11 +299,7 @@ price
   margin-top: 20px;
   cursor: pointer;
 }
-@media screen and (max-width: 480px) {
-  .card-form__button {
-    margin-top: 10px;
-  }
-}
+
 
 .card-item {
   max-width: 430px;
@@ -344,18 +310,7 @@ price
   z-index: 2;
   width: 100%;
 }
-@media screen and (max-width: 480px) {
-  .card-item {
-    max-width: 310px;
-    height: 220px;
-    width: 90%;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-item {
-    height: 180px;
-  }
-}
+
 .card-item.-active .card-item__side.-front {
   transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotateZ(0deg);
 }
@@ -450,29 +405,9 @@ price
   margin-bottom: 40px;
   padding: 0 10px;
 }
-@media screen and (max-width: 480px) {
-  .card-item__top {
-    margin-bottom: 25px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-item__top {
-    margin-bottom: 15px;
-  }
-}
-.card-item__chip {
-  width: 60px;
-}
-@media screen and (max-width: 480px) {
-  .card-item__chip {
-    width: 50px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-item__chip {
-    width: 40px;
-  }
-}
+
+
+
 .card-item__type {
   height: 45px;
   position: relative;
@@ -482,17 +417,7 @@ price
   margin-left: auto;
   width: 100%;
 }
-@media screen and (max-width: 480px) {
-  .card-item__type {
-    height: 40px;
-    max-width: 90px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-item__type {
-    height: 30px;
-  }
-}
+
 .card-item__typeImg {
   max-width: 100%;
   object-fit: contain;
@@ -508,11 +433,7 @@ price
   display: block;
   cursor: pointer;
 }
-@media screen and (max-width: 480px) {
-  .card-item__info {
-    padding: 10px;
-  }
-}
+
 .card-item__holder {
   opacity: 0.7;
   font-size: 13px;
@@ -533,11 +454,7 @@ price
   text-shadow: 7px 6px 10px rgba(14, 42, 90, 0.8);
   user-select: none;
 }
-@media screen and (max-width: 480px) {
-  .card-item__wrapper {
-    padding: 20px 10px;
-  }
-}
+
 .card-item__name {
   font-size: 18px;
   line-height: 1;
@@ -547,11 +464,7 @@ price
   text-overflow: ellipsis;
   text-transform: uppercase;
 }
-@media screen and (max-width: 480px) {
-  .card-item__name {
-    font-size: 16px;
-  }
-}
+
 .card-item__nameItem {
   display: inline-block;
   min-width: 8px;
@@ -567,20 +480,7 @@ price
   padding: 10px 15px;
   cursor: pointer;
 }
-@media screen and (max-width: 480px) {
-  .card-item__number {
-    font-size: 21px;
-    margin-bottom: 15px;
-    padding: 10px 10px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-item__number {
-    font-size: 19px;
-    margin-bottom: 10px;
-    padding: 10px 10px;
-  }
-}
+
 .card-item__numberItem {
   width: 16px;
   display: inline-block;
@@ -588,22 +488,7 @@ price
 .card-item__numberItem.-active {
   width: 30px;
 }
-@media screen and (max-width: 480px) {
-  .card-item__numberItem {
-    width: 13px;
-  }
-  .card-item__numberItem.-active {
-    width: 16px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-item__numberItem {
-    width: 12px;
-  }
-  .card-item__numberItem.-active {
-    width: 8px;
-  }
-}
+
 .card-item__content {
   color: #fff;
   display: flex;
@@ -620,11 +505,7 @@ price
   flex-shrink: 0;
   cursor: pointer;
 }
-@media screen and (max-width: 480px) {
-  .card-item__date {
-    font-size: 16px;
-  }
-}
+
 .card-item__dateItem {
   position: relative;
 }
@@ -638,12 +519,7 @@ price
   padding-bottom: 6px;
   width: 100%;
 }
-@media screen and (max-width: 480px) {
-  .card-item__dateTitle {
-    font-size: 12px;
-    padding-bottom: 5px;
-  }
-}
+
 .card-item__band {
   background: rgba(0, 0, 19, 0.8);
   width: 100%;
@@ -652,17 +528,8 @@ price
   position: relative;
   z-index: 2;
 }
-@media screen and (max-width: 480px) {
-  .card-item__band {
-    margin-top: 20px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-item__band {
-    height: 40px;
-    margin-top: 10px;
-  }
-}
+
+
 .card-item__cvv {
   text-align: right;
   position: relative;
@@ -672,11 +539,7 @@ price
 .card-item__cvv .card-item__type {
   opacity: 0.7;
 }
-@media screen and (max-width: 360px) {
-  .card-item__cvv {
-    padding: 10px 15px;
-  }
-}
+
 .card-item__cvvTitle {
   padding-right: 10px;
   font-size: 15px;
@@ -698,27 +561,16 @@ price
   border-radius: 4px;
   box-shadow: 0px 10px 20px -7px rgba(32, 56, 117, 0.35);
 }
-@media screen and (max-width: 480px) {
-  .card-item__cvvBand {
-    height: 40px;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .card-item__cvvBand {
-    margin-bottom: 15px;
-  }
-}
+
 
 .card-list {
   margin-bottom: -130px;
 }
-@media screen and (max-width: 480px) {
-  .card-list {
-    margin-bottom: -120px;
-  }
-}
 
+
+/*==============================
+input Card
+==============================*/
 .card-input {
   margin-bottom: 20px;
 }
@@ -802,4 +654,153 @@ price
   opacity: 0;
   transform: translateX(-10px) rotate(45deg);
   pointer-events: none;
+}
+
+
+
+
+
+
+/*==============================
+Responsive
+==============================*/
+
+@media screen and (max-width: 700px), (max-height: 500px) {
+  .wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .card-form {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-form__inner {
+    padding: 25px;
+    padding-top: 165px;
+  }
+  .card-form__row {
+    flex-wrap: wrap;
+  }
+  .card-form__col {
+    margin-right: 0;
+    flex: unset;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card-form__col {
+    margin-right: 0;
+    flex: unset;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card-form__col.-cvv {
+    max-width: initial;
+  }
+  .card-form__button {
+    margin-top: 10px;
+  }
+  .card-item__info {
+    padding: 10px;
+  }
+
+  .card-item__wrapper {
+    padding: 20px 10px;
+  }
+  .card-item__name {
+    font-size: 16px;
+  }
+
+  .card-item__number {
+    font-size: 21px;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+  }
+  .card-item__numberItem {
+    width: 13px;
+  }
+  .card-item__numberItem.-active {
+    width: 16px;
+  }
+  .card-item__date {
+    font-size: 16px;
+  }
+  .card-item__dateTitle {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+  .card-item__band {
+    margin-top: 20px;
+  }
+
+  .card-item__cvvBand {
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  .card-list {
+    margin-bottom: -120px;
+  }
+  .card-item__chip {
+    width: 50px;
+  }
+  .card-item__top {
+    margin-bottom: 25px;
+  }
+  .card-item {
+    max-width: 310px;
+    height: 220px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card-item {
+    height: 180px;
+  }
+   .card-item__top {
+    margin-bottom: 15px;
+  }
+  .card-item__chip {
+  width: 60px;
+}
+.card-item__chip {
+    width: 40px;
+  }
+   .card-item__type {
+    height: 40px;
+    max-width: 90px;
+  }
+   .card-item__type {
+    height: 30px;
+  }
+  .card-item__number {
+    font-size: 19px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+  }
+  .card-form__inner {
+    padding: 15px;
+    padding-top: 165px;
+  }
+  .card-item__numberItem {
+    width: 12px;
+  }
+  .card-item__numberItem.-active {
+    width: 8px;
+  }
+  .card-item__band {
+    height: 40px;
+    margin-top: 10px;
+  }
+  .card-item__cvv {
+    padding: 10px 15px;
+  }
+    .card-item__cvvBand {
+    margin-bottom: 15px;
+  }
 }

@@ -63,7 +63,7 @@
                 <i  class="fa-solid fa-moon fa-lg themeicon "></i>
                 <i  class="fa-solid fa-lightbulb-on fa-lg themeicon d-none"></i>
             </button>
-            <a href="#" class="d-inline-block d-lg-none">
+            <a href="profile.html" class="d-inline-block d-lg-none">
                 <i  class="fa-solid fa-bell-on fa-lg"></i>
             </a>
             <a href="profile.html" class="d-inline-block d-lg-none">
@@ -102,7 +102,7 @@
                 <li class="listItem"><i class="fa-light fa-user fa-lg mr-4"></i> <a href="profile.html">Profile</a></li>
                 <li class="listItem"><i class="fa-light fa-file-signature fa-lg mr-4"></i> <a href="contacts.html">Contacts</a></li>
                 <li class="listItem"><i class="fa-light fa-siren-on fa-lg mr-4"></i> <a href="privacy-policy.html">Privacy policy</a></li>
-                <li class="listItem"><i class="fa-light fa-gear fa-lg mr-4"></i> <a href="about.html">About-Us</a></li>
+                <li class="listItem"><i class="fa-light fa-circle-exclamation fa-lg mr-4"></i> <a href="about.html">About-Us</a></li>
                 <li class="listItem"><i class="fa-light fa-coins fa-lg mr-4"></i><a href="payment.html"> Pricing plans</a></li>
                 
                 
@@ -132,10 +132,10 @@
             <!-- tools nsv -->
             <div class="d-md-none d-lg-inline-block toolsNav">
                 <ul class="item-nav d-none d-md-flex">
-                    <li><a class="hvr" href="index.html">Home</a></li>
+                    <li><a class="activeNavBar hvr" href="index.html">Home</a></li>
                     <li><a class="hvr" href="index-html">News</a></li>
                     <li class="position-relative">
-                        <a class="activeNavBar hvr" href="#">Movies</a> <i class="fa-light fa-chevron-down fa-xs"></i>
+                        <a class="hvr" href="#">Movies</a> <i class="fa-light fa-chevron-down fa-xs"></i>
                         <div class="dropdownList">
                             <a href="Seaction.html">English movies</a>
                             <a href="Seaction.html">Arabic Movies</a>
@@ -161,26 +161,43 @@
                         <div class="dropdownList">
                             <a href="admin/dashboard.html">Admin</a>
                             <a href="profile.html">Profile</a>
+                            <a href="show-Room.html">Show Room</a>
+                            <a href="Item-Details.html">Item Detalis</a>
+                            <a href="Seaction.html">Section</a>
                             <a href="contacts.html">Contacts</a>
-                            <a href="privacy-policy.html">Privacy policy</a>
                             <a href="about.html">About-Us</a>
+                            <a href="privacy-policy.html">Privacy policy</a>
                             <a href="payment.html">Pricing plans</a>
                         </div>
                     </li>
                 </ul>
             </div>
-        <!-- icons -->
+            <!-- icons -->
             <div class="iconsnav">
                 <button id="open" class="icon">
                     <i class="fa-light fa-magnifying-glass fa-lg"></i>
                 </button>
                 
                 <button class="icon d-none d-lg-inline themeicons">
-                    <i  class="fa-solid fa-lightbulb-on fa-lg themeicon btnLight text-warning"></i>
+                    <i  class="fa-light fa-lightbulb-on fa-lg themeicon btnLight"></i>
                     <i  class="fa-light fa-moon fa-lg themeicon d-none"></i>
                 </button>
-                <a class="icon d-none d-md-flex" href="login.html">Sign in</a>
-                <button id="openSlider" class="d-lg-none">
+                <!-- toogle Login Logout -->
+                <a class="icon d-none" href="login.html">Sign in</a>
+                <ul class="item-nav d-inline-flex">
+                    <li class="position-relative d-flex align-items-center">
+                        <i class="fa-light fa-chevron-down fa-xs pr-2"></i>
+                        <a class="icon nav-user d-inline-flex" href="login.html">
+                            <img src="asstes/img/user.svg" alt="user">
+                        </a>
+                        <div class="dropdownList">
+                            <a href="profile.html">Profile</a>
+                            <a href="profile.html">notifications</a>
+                            <a href="login.html">Log in</a>
+                        </div>
+                    </li>
+                </ul>
+                <button id="openSlider" class="d-lg-none ml-4">
                     <i class="fa-light fa-bars-staggered fa-lg"></i>
                 </button>
             </div>

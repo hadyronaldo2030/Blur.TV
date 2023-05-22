@@ -8,7 +8,7 @@ Devloper:	Hady Rabie - Mohamed Salah
 
 1. fonts
 2. Common styles
-3. Login
+3. sign in sign up
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
@@ -40,7 +40,7 @@ input {
 
 
 /* ========================= 
-  LogIn Logout
+  Sign In & Sign Up 
 ========================= */
 /*...... logo .......*/
 .logo{

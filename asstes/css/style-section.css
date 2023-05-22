@@ -11,7 +11,6 @@ Devloper:	Hady Rabie - Mohamed Salah
 3. Start Content
 4. Responsive
 
-
 ----------------------------------------*/
 
 /*==============================
@@ -103,8 +102,8 @@ header .dropdown-item{
 header li a{
 	padding: 8px 35px 8px 15px !important;
 }
-/* Ranges */
 
+/* Ranges */
 .ranges {
 	width: 300px;
     display: inline-flex;
@@ -547,8 +546,7 @@ header li a{
 		display: flex!important; 
 		justify-content:space-between!important;
 	}
-}
-	
+}	
 @media (max-width: 590px) {
 	.d-none-590{
 		display: none!important;
@@ -577,7 +575,3 @@ header li a{
 		padding: 0px!important;
 	}
 }
-
-/*==============================
-	End Responsive
-==============================*/  

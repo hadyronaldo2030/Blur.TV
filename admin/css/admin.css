@@ -61,7 +61,7 @@ Devloper:	Hady Rabie - Mohamed Salah
 html[data-theme="lightMode"]{
 	--darkMode: #EEE;
 	--lightMode: rgba(9,18,32,1);
-	--yellow: #F7FF00;
+	--yellow: #f9ab00;
 	--red-blue: #FF0000;
 	--blue-red: #0051ff;
 	--red: #FF0000;
@@ -151,16 +151,8 @@ ul {
   padding: 0;
   list-style: none;
 }
-::-moz-selection {
-  background: var(--yellow-blue);
-  color: var(--darkMode);
-  text-shadow: none;
-}
-::selection {
-  background: var(--yellow-blue);
-  color: var(--darkMode);
-  text-shadow: none;
-}
+
+
 ::-webkit-input-placeholder {
   color: var(--title);
   opacity: 1;

@@ -6,13 +6,10 @@ Devloper:	Hady Rabie - Mohamed Salah
 /*----------------------------------------
 [Table of contents]
 
-1. Fonts
-2. Common styles
-3. Theme Dark & light
-4. Navbar
-5. Aside
-6. Footer
-7. Loading
+1. Theme Dark & light
+2. Header
+3. form
+4. Map
 
 
 /*==============================
@@ -89,7 +86,7 @@ html[data-theme="lightMode"]{
 }
 /* End Header  */
 
-/* Start Container */
+/* Start contact */
 .contact{
     padding: 20px;
     margin: 20px;
@@ -259,9 +256,7 @@ html[data-theme="lightMode"]{
     color: #ff578b;
 }
 
-
 /* Start Map */
-
 .map{
     padding: 0;
 }
