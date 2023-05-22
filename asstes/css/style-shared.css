@@ -183,7 +183,7 @@ nav .item-nav li:hover .dropdownList {
 .item-nav li .dropdownList {
 	transition: all 2s ease-in-out;
 	position: absolute;
-	top: 30px;
+	top: 25px;
 	right: -100px;
 	width: 200px;
 	border-bottom-left-radius: 10px;
