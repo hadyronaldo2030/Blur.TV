@@ -395,7 +395,7 @@ html[data-theme="lightMode"]{
   padding: 20px;
   overflow-x: scroll;
 }
-.icon{
+.dashbox .icon{
   padding-right: 10px;
   color: #f9ab00
 }
