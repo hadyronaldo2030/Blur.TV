@@ -565,7 +565,11 @@ header li a{
 		margin-top: 15px!important;
 	}	
 	.titleSections{
-		justify-content: center;
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: column;
 	}
 	
 }
