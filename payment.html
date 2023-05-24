@@ -105,7 +105,7 @@
             <form>
                 <button class="close"><i class="fa-regular fa-magnifying-glass fa-lg"></i></button>
                 <input type="search" placeholder="Find your movie here" >
-                <button class="close"><i class="fa-solid fa-regular fa-xmark fa-lg"></i></button>
+                <a href="#" class="close"><i class="fa-solid fa-regular fa-xmark fa-lg"></i></a>
             </form>
         </div>
         <div class="w-100 h-100">
@@ -118,7 +118,7 @@
         <!-- tools nsv -->
         <div class="d-md-none d-lg-inline-block toolsNav">
             <ul class="item-nav d-none d-md-flex">
-                <li><a class="activeNavBar hvr" href="index.html">Home</a></li>
+                <li><a class=" hvr" href="index.html">Home</a></li>
                 <li><a class="hvr" href="index.html">News</a></li>
                 <li class="position-relative">
                     <a class=" hvr" href="#">Movies</a> <i class="fa-light fa-chevron-down fa-xs"></i>
@@ -143,14 +143,16 @@
                     </div>
                 </li>
                 <li class="position-relative">
-                    <a class="hvr" href="#">More</a> <i class="fa-light fa-chevron-down fa-xs"></i>
+                    <a class="activeNavBar hvr" href="#">More</a> <i class="fa-light fa-chevron-down fa-xs"></i>
                     <div class="dropdownList">
-                        <a href="admin/dashboard.html">Admin</a>
-                        <a href="profile.html">Profile</a>
-                        <a href="contacts.html">Contacts</a>
-                        <a href="privacy-policy.html">Privacy policy</a>
-                        <a href="about.html">About-Us</a>
-                        <a href="payment.html">Pricing plans</a>
+                      <a href="admin/dashboard.html">Admin</a>
+                      <a href="profile.html">Profile</a>
+                      <a href="item-details.html">Item Details</a>
+                      <a href="show-Room.html">Show Room</a>
+                      <a href="contacts.html">Contacts</a>
+                      <a href="privacy-policy.html">Privacy policy</a>
+                      <a href="about.html">About-Us</a>
+                      <a href="payment.html">Pricing plans</a>
                     </div>
                 </li>
             </ul>
@@ -422,14 +424,16 @@
             </div>
           </div>
 
-          <!-- btn submit -->
-          <button class="card-form__button">
-            Submit
-          </button>
-          <!-- btn cancel -->
-          <button class="card-form__button Cancel">
-            Cancel
-          </button>
+          <div class="d-inline-flex justify-content-between w-100">
+            <!-- btn submit -->
+            <button class="card-form__button mr-2">
+              Submit
+            </button>
+            <!-- btn cancel -->
+            <button class="card-form__button Cancel ml-2">
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
       

@@ -1,5 +1,3 @@
-/*  ناقصه كلين كود */
-
 /*----------------------------------------
 Project:	Blur.TV HTML Template
 
@@ -76,10 +74,15 @@ html[data-theme="lightMode"]{
 *:focus {
   outline: none;
 }
+label {
+  margin-bottom:0
+}
 
 
 
-/* Start Header  */
+/*==============================
+	Start Header
+==============================*/
 .poseterHeader {
   display: flex;
     justify-content: center;
@@ -93,7 +96,8 @@ html[data-theme="lightMode"]{
     height: 260px;
     background: linear-gradient(20deg,rgba(3, 3, 3, 0.911), rgba(0, 0, 0, 0.445)), url(../img/cover.jpg) no-repeat center center /cover;
 }
-/* End Header  */
+
+
 /*==============================
 	payment
 ==============================*/
@@ -223,16 +227,17 @@ Card Wrapper
 ==============================*/
 
 .wrapper {
-  position:absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: #00000087;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   display: flex;
   padding: 50px 15px;
   z-index: 1000;
   display: none;
+  overflow-y: scroll;
 }
 
 
@@ -285,16 +290,15 @@ Card Wrapper
   margin-right: 0;
 }
 .card-form__button {
-  width: 100%;
-  height: 55px;
+  width: 50%;
+  height: 35px;
   box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
-	background: var(--lightMose);
+  background: var(--lightMose);
   border: none;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   font-family: "Source Sans Pro", sans-serif;
-  /* box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3); */
   color: var(--darkMode);
   margin-top: 20px;
   cursor: pointer;
@@ -402,7 +406,7 @@ Card Wrapper
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: 0 10px;
 }
 
@@ -475,7 +479,7 @@ Card Wrapper
   line-height: 1;
   color: #fff;
   font-size: 27px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   display: inline-block;
   padding: 10px 15px;
   cursor: pointer;
@@ -562,7 +566,6 @@ Card Wrapper
   box-shadow: 0px 10px 20px -7px rgba(32, 56, 117, 0.35);
 }
 
-
 .card-list {
   margin-bottom: -130px;
 }
@@ -585,10 +588,10 @@ input Card
 }
 .card-input__input {
   width: 100%;
-  height: 50px;
+  height: 35px;
   border-radius: 5px;
   box-shadow: none;
-  border: 1px solid #ced6e0;
+  border: 1px solid #586472;
   transition: all 0.3s ease-in-out;
   font-size: 18px;
   padding: 5px 15px;
@@ -602,12 +605,8 @@ input Card
 .card-input__input:focus {
   box-shadow: 0px 10px 20px -13px rgba(32, 56, 117, 0.35);
 }
-.card-input__input.-select {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAYAAABuUU38AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUxJREFUeNrM1sEJwkAQBdCsngXPHsQO9O5FS7AAMVYgdqAd2IGCDWgFnryLFQiCZ8EGnJUNimiyM/tnk4HNEAg/8y6ZmMRVqz9eUJvRaSbvutCZ347bXVJy/ZnvTmdJ862Me+hAbZCTs6GHpyUi1tTSvPnqTpoWZPUa7W7ncT3vK4h4zVejy8QzM3WhVUO8ykI6jOxoGA4ig3BLHcNFSCGqGAkig2yqgpEiMsjSfY9LxYQg7L6r0X6wS29YJiYQYecemY+wHrXD1+bklGhpAhBDeu/JfIVGxaAQ9sb8CI+CQSJ+QmJg0Ii/EE2MBiIXooHRQhRCkBhNhBcEhLkwf05ZCG8ICCOpk0MULmvDSY2M8UawIRExLIQIEgHDRoghihgRIgiigBEjgiFATBACAgFgghEwSAAGgoBCBBgYAg5hYKAIFYgHBo6w9RRgAFfy160QuV8NAAAAAElFTkSuQmCC");
-  background-size: 12px;
-  background-position: 90% center;
-  background-repeat: no-repeat;
-  padding-right: 30px;
+.card-input__input.-select option {
+  color: #000;
 }
 
 .slide-fade-up-enter-active {
@@ -655,10 +654,6 @@ input Card
   transform: translateX(-10px) rotate(45deg);
   pointer-events: none;
 }
-
-
-
-
 
 
 /*==============================

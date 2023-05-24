@@ -184,8 +184,8 @@ nav .item-nav li:hover .dropdownList {
 	transition: all 2s ease-in-out;
 	position: absolute;
 	top: 25px;
-	right: -100px;
-	width: 200px;
+	right: -55px;
+	width: 160px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	background: var(--blue-white);
@@ -380,7 +380,7 @@ aside .dropMovie, .dropSeries{
 }
 aside a{color: var(--darkMode);}
 /*==============================
-	End Navbar
+	End aside
 ==============================*/
 
 /*==============================
