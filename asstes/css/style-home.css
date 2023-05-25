@@ -89,24 +89,23 @@ html[data-theme="lightMode"]{
   -webkit-transform: rotateX(-10deg);
           transform: rotateX(-10deg);
 }
-#drag-on img, #drag-on video {
-	padding: 10px;
-	border-radius: 20px;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	position: absolute;
-	left: 0;
-	top: 90px;
-	width: 100%;
-	height: 100%;
-	line-height: 200px;
-	font-size: 50px;
-	text-align: center;
-	cursor: pointer!important;
-	-webkit-box-shadow: 0 0 8px #fff;
-	box-shadow: 0 0 8px #A9B3FB;
-	-webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
-	transition: .5s!important;
+#drag-on img {
+  padding: 10px;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  top: 90px;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+  cursor: pointer!important;
+  -webkit-box-shadow: 0 0 8px #fff;
+  box-shadow: 0 0 8px #A9B3FB;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+  transition: .5s!important;
+  will-change: transform;
 }
 #drag-on img:hover, #drag-on video:hover {
 	/* transform: scale(1.2 , 1.2)!important; */
