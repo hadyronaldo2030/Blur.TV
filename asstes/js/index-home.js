@@ -84,86 +84,40 @@ function play() {
 	requestAnimationFrame(play)
 } 
 // ====================== OWl Carousel  ======================
-// $(document).ready(function(){	
-// 	$('.owl-carousel').owlCarousel({
-// 		loop:true,
-// 		dots:4,
-// 		nav:false,
-// 		autoPlay:true,
-// 		autoplayTimeout:4000,
-// 		mousedrag:true,
-// 		touchDrag: true,
-// 		smartSpeed: 600,
-// 		margin: 20,
-// 		autoHeight: true,		
-// 		responsive:{
-// 			60:{
-// 				items:1
-// 			},
-// 			520:{
-// 				items:2
-// 			},
-// 			740:{
-// 				items:3
-// 			},
-// 			940:{
-// 				items:4
-// 			},
-// 			1200:{
-// 				items:5
-// 			},
-// 			1460:{
-// 				items:6
-// 			}
-// 		}
-// 	});
-var loop = true;
-var dots = 4;
-var nav = false;
-var autoPlay = true;
-var autoplayTimeout = 4000;
-var mousedrag = true;
-var touchDrag = true;
-var smartSpeed = 600;
-var margin = 20;
-var autoHeight = true;
+$(document).ready(function(){	
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		dots:4,
+		nav:false,
+		autoPlay:true,
+		autoplayTimeout:4000,
+		mousedrag:true,
+		touchDrag: true,
+		smartSpeed: 600,
+		margin: 20,
+		autoHeight: true,		
+		responsive:{
+			60:{
+				items:1
+			},
+			520:{
+				items:2
+			},
+			740:{
+				items:3
+			},
+			940:{
+				items:4
+			},
+			1200:{
+				items:5
+			},
+			1460:{
+				items:6
+			}
+		}
+	});
 
-var responsive = {
-  60: {
-    items: 1
-  },
-  520: {
-    items: 2
-  },
-  740: {
-    items: 3
-  },
-  940: {
-    items: 4
-  },
-  1200: {
-    items: 5
-  },
-  1460: {
-    items: 6
-  }
-};
-
-$(document).ready(function() {
-  $('.owl-carousel').owlCarousel({
-    loop: loop,
-    dots: dots,
-    nav: nav,
-    autoPlay: autoPlay,
-    autoplayTimeout: autoplayTimeout,
-    mousedrag: mousedrag,
-    touchDrag: touchDrag,
-    smartSpeed: smartSpeed,
-    margin: margin,
-    autoHeight: autoHeight,
-    responsive: responsive
-  });
-});
 	/*==============================
 	Navigation prev Next
 	==============================*/
@@ -213,17 +167,20 @@ $(function() {
 		ele.style.transition = 'transform 1s';
 		ele.style.transitionDelay = `${delayTime || (aEle.length - i) / 4}s`;
 	  });
+		requestAnimationFrame(init)
 	}
   
 	// Function to apply transform to selected element
 	function applyTransform(obj) {
 	  let ty = Math.min(Math.max(-180, tY), 0);
 	  obj.style.transform = `rotateX(${ty}deg) rotateY(${tX}deg)`;
+		requestAnimationFrame(applyTransform)
 	}
   
 	// Function to play/pause rotation of elements
 	function playSpin(yes) {
 	  ospin.style.animationPlayState = yes ? 'running' : 'paused';
+		requestAnimationFrame(playSpin)
 	}
   
 	// Update transform values on mouse movement
@@ -260,6 +217,7 @@ $(function() {
 	let spinTimer = setInterval(() => {
 	  tX += 0.1;
 	  applyTransform(ospin);
+		requestAnimationFrame(spinTimer)
 	}, 16);
   
 	// Play/pause rotation on mouse enter/leave
