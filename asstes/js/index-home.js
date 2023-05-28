@@ -36,12 +36,21 @@ function init(delayTime) {
   }
 }
 
+// function applyTranform(obj) {
+
+//   if(tY > 180) tY = 180;
+//   if(tY < 0) tY = 0;
+
+//   obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+// }
+// New Code
 function applyTranform(obj) {
 
   if(tY > 180) tY = 180;
   if(tY < 0) tY = 0;
 
   obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+  requestAnimationFrame(applyTranform);
 }
 
 function playSpin(yes) {
