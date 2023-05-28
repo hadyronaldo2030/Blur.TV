@@ -33,6 +33,7 @@ function init(delayTime) {
     aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
     aEle[i].style.transition = "transform 1s";
     aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+    requestAnimationFrame(init)
   }
 }
 
@@ -55,6 +56,7 @@ function applyTranform(obj) {
 
 function playSpin(yes) {
   ospin.style.animationPlayState = (yes?'running':'paused');
+requestAnimationFrame(playSpin)
 }
 
 var sX, sY, nX, nY, desX = 0,
@@ -73,11 +75,14 @@ function stop() {
   if (autoRotate) {
     ospin.style.animationPlayState = 'paused';
   }
+	requestAnimationFrame(stop)
 }
 function play() {
   if (autoRotate) {
     ospin.style.animationPlayState = 'running';
+	  
   }
+	requestAnimationFrame(play)
 } 
 // ====================== OWl Carousel  ======================
 $(document).ready(function(){	
