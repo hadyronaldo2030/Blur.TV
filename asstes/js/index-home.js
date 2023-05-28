@@ -84,14 +84,47 @@ function play() {
 	requestAnimationFrame(play)
 } 
 // ====================== OWl Carousel  ======================
-$(document).ready(function(){	
+// $(document).ready(function(){	
+// 	$('.owl-carousel').owlCarousel({
+// 		loop:true,
+// 		dots:4,
+// 		nav:false,
+// 		autoPlay:true,
+// 		autoplayTimeout:4000,
+// 		mousedrag:true,
+// 		touchDrag: true,
+// 		smartSpeed: 600,
+// 		margin: 20,
+// 		autoHeight: true,		
+// 		responsive:{
+// 			60:{
+// 				items:1
+// 			},
+// 			520:{
+// 				items:2
+// 			},
+// 			740:{
+// 				items:3
+// 			},
+// 			940:{
+// 				items:4
+// 			},
+// 			1200:{
+// 				items:5
+// 			},
+// 			1460:{
+// 				items:6
+// 			}
+// 		}
+// 	});
+$(function(){
 	$('.owl-carousel').owlCarousel({
 		loop:true,
 		dots:4,
 		nav:false,
-		autoPlay:true,
+		autoplay:true,
 		autoplayTimeout:4000,
-		mousedrag:true,
+		mouseDrag:true,
 		touchDrag: true,
 		smartSpeed: 600,
 		margin: 20,
@@ -117,6 +150,7 @@ $(document).ready(function(){
 			}
 		}
 	});
+});
 	/*==============================
 	Navigation prev Next
 	==============================*/
