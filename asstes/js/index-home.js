@@ -32,7 +32,7 @@ function init(delayTime) {
     aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
     aEle[i].style.transition = "transform 1s";
     aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
-    requestAnimationFrame(init)
+    
   }
 }
 
@@ -50,12 +50,12 @@ function applyTranform(obj) {
   if(tY < 0) tY = 0;
 
   obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
-  requestAnimationFrame(applyTranform);
+ 
 }
 
 function playSpin(yes) {
   ospin.style.animationPlayState = (yes?'running':'paused');
-requestAnimationFrame(playSpin)
+
 }
 
 var sX, sY, nX, nY, desX = 0,
@@ -74,14 +74,14 @@ function stop() {
   if (autoRotate) {
     ospin.style.animationPlayState = 'paused';
   }
-	requestAnimationFrame(stop)
+	
 }
 function play() {
   if (autoRotate) {
     ospin.style.animationPlayState = 'running';
 	  
   }
-	requestAnimationFrame(play)
+	
 } 
 // ====================== OWl Carousel  ======================
 $(document).ready(function(){	
@@ -167,20 +167,20 @@ $(function() {
 		ele.style.transition = 'transform 1s';
 		ele.style.transitionDelay = `${delayTime || (aEle.length - i) / 4}s`;
 	  });
-		requestAnimationFrame(init)
+		
 	}
   
 	// Function to apply transform to selected element
 	function applyTransform(obj) {
 	  let ty = Math.min(Math.max(-180, tY), 0);
 	  obj.style.transform = `rotateX(${ty}deg) rotateY(${tX}deg)`;
-		requestAnimationFrame(applyTransform)
+		
 	}
   
 	// Function to play/pause rotation of elements
 	function playSpin(yes) {
 	  ospin.style.animationPlayState = yes ? 'running' : 'paused';
-		requestAnimationFrame(playSpin)
+		
 	}
   
 	// Update transform values on mouse movement
@@ -217,7 +217,7 @@ $(function() {
 	let spinTimer = setInterval(() => {
 	  tX += 0.1;
 	  applyTransform(ospin);
-		requestAnimationFrame(spinTimer)
+		
 	}, 16);
   
 	// Play/pause rotation on mouse enter/leave
